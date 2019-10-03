@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@color/colorFundSplash">
+    </item>
+
+
+
+    <item>
+        <rotate
+            android:fromDegrees="64"
+            android:pivotX="7%"
+            android:pivotY="76%"
+
+            >
+            <shape
+
+                android:shape="rectangle">
+                <solid android:color="#616161" />
+
+            </shape>
+        </rotate>
+
+    </item>
+
+
+
+</layer-list>

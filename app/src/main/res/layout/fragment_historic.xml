@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragmenst.HistoricFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_balance_available"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_time_balance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_profile" />
+
+            <ImageView
+                android:id="@+id/iv_Discount_on_days"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_discount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_historic" />
+
+            <ImageView
+                android:id="@+id/iv_Bonus_days"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_bonus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_Discount_on_days" />
+
+
+            <TextView
+                android:id="@+id/tv_titel_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Saldo disponível"
+                android:textColor="@color/colorTextViewText"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_balance_available"
+                app:layout_constraintStart_toEndOf="@+id/iv_balance_available"
+                app:layout_constraintTop_toTopOf="@+id/iv_balance_available" />
+
+            <TextView
+                android:id="@+id/tv_time_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/quicksand_light"
+                android:text="23 minutos"
+                android:textColor="@color/colorTextViewText"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_titel_balance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_titel_balance" />
+
+            <TextView
+                android:id="@+id/tv_titel_Discount_on_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Desconto nos últimos 30 dias"
+                android:textColor="@color/colorTextViewText"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_Discount_on_days"
+                app:layout_constraintStart_toEndOf="@+id/iv_Discount_on_days"
+                app:layout_constraintTop_toTopOf="@+id/iv_Discount_on_days" />
+
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/quicksand_light"
+                android:text="R$ 15,00"
+                android:textColor="@color/colorTextViewText"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_titel_Discount_on_days"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_titel_Discount_on_days" />
+
+
+            <TextView
+                android:id="@+id/tv_titel_Bonus_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Bônus nos últimos 30 dias"
+                android:textColor="@color/colorTextViewText"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_Bonus_days"
+                app:layout_constraintStart_toEndOf="@+id/iv_Bonus_days"
+                app:layout_constraintTop_toTopOf="@+id/iv_Bonus_days" />
+
+            <TextView
+                android:id="@+id/tv_Bonus_days_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/quicksand_light"
+                android:text="45 minutos"
+                android:textColor="@color/colorTextViewText"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_titel_Bonus_days"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_titel_Bonus_days" />
+
+            <View
+                android:id="@+id/v_historic"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_balance_available" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_historic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_Bonus_days">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/mt_toolbar_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="@string/title_toolbar_historic"
+                app:titleTextAppearance="@style/MaterialToolbarMenuStyleTheme"
+                app:titleTextColor="@color/color_toolbar_menu" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

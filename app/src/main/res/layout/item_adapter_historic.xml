@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MaterialCardViewTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="24dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_service_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginRight="26dp"
+            android:fontFamily="@font/quicksand_regular"
+            tools:text="Hoje"
+            android:textColor="@color/colorTextButton"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_type_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/tv_type_service_title"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_service_date" />
+
+        <TextView
+            android:id="@+id/tv_time_servic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/quicksand_light"
+            tools:text="- 10 minutos"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_type_service"
+            app:layout_constraintTop_toBottomOf="@id/tv_type_service" />
+
+        <TextView
+            android:id="@+id/tv_permanence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/tv_permanence_historic"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_time_servic"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_servic" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/tv_amount_historic"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_discount"
+            app:layout_constraintStart_toEndOf="@+id/tv_permanence"
+            app:layout_constraintTop_toTopOf="@+id/tv_permanence" />
+
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginRight="26dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/tv_discounr_historic"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_amount" />
+
+        <TextView
+            android:id="@+id/tv_time_permanence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/quicksand_light"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_permanence"
+            app:layout_constraintTop_toBottomOf="@+id/tv_permanence"
+            tools:text="2 horas" />
+
+        <TextView
+            android:id="@+id/tv_grand_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/quicksand_light"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_amount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount"
+            tools:text="20 reais" />
+
+        <TextView
+            android:id="@+id/tv_total_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/quicksand_light"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_discount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_discount"
+            tools:text="2 reais" />
+
+        <TextView
+            android:id="@+id/tv_form_of_payment_historic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Forma de pagametno"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_time_permanence"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_permanence" />
+
+        <TextView
+            android:id="@+id/tv_amount_paid_hitoric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Valor pago"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_form_of_payment_historic"
+            app:layout_constraintTop_toTopOf="@id/tv_form_of_payment_historic" />
+
+        <TextView
+            android:id="@+id/tv_type_of_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/quicksand_light"
+            android:text="Em dinheiro"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_form_of_payment_historic"
+            app:layout_constraintTop_toBottomOf="@id/tv_form_of_payment_historic" />
+
+        <TextView
+            android:id="@+id/tv_final_amount_paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/quicksand_light"
+            android:text="R$ 18,00"
+            android:textColor="@color/colorNameTextView"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_amount_paid_hitoric"
+            app:layout_constraintTop_toBottomOf="@id/tv_amount_paid_hitoric" />
+
+        <View
+            android:id="@+id/tv_pasting_history"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_final_amount_paid" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

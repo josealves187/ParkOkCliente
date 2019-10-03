@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.RegistrationDataActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_data_registrion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow"
+        app:title="@string/title_toolbar_dat_registration"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"
+        app:titleTextColor="@color/color_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_data_registrion">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btn_registe"
+                style="@style/MaterialEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="26dp"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_register"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <TextView
+                android:id="@+id/btn_regist"
+                style="@style/MaterialEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="26dp"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_registe"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <TextView
+                android:id="@+id/btn_register"
+                style="@style/MaterialEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="26dp"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aciv_photo_user_detais" />
+
+            <TextView
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_email"
+                app:layout_constraintBottom_toTopOf="@+id/btn_regist"
+                app:layout_constraintStart_toStartOf="@+id/btn_regist" />
+
+            <TextView
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_cpf"
+                app:layout_constraintBottom_toTopOf="@+id/btn_registe"
+                app:layout_constraintStart_toStartOf="@+id/btn_registe" />
+
+            <TextView
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_name"
+                app:layout_constraintBottom_toTopOf="@+id/btn_register"
+                app:layout_constraintStart_toStartOf="@+id/btn_register" />
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_change"
+                style="@style/MaterialBottonStylePtofileTheme"
+                android:layout_width="268dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:padding="12dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/register_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_regist"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/aciv_photo_user_detais"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_profile_picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

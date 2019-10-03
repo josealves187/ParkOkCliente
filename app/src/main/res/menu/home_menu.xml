@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_qrcode"
+        android:icon="@drawable/ic_qrcode"
+        android:title="@string/tltle_menu_qr_code">
+    </item>
+
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@drawable/ic_map"
+        android:title="@string/tltle_menu_map">
+    </item>
+
+    <item
+        android:id="@+id/nav_historic"
+        android:icon="@drawable/ic_historic"
+        android:title="@string/tltle_menu_historic">
+    </item>
+
+    <item
+        android:id="@+id/nav_friend"
+        android:icon="@drawable/ic_friend"
+        android:title="@string/tltle_menu_friend">
+    </item>
+
+
+
+
+</menu>

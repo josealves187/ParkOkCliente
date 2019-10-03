@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragmenst.QRcodeFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_qr_code_input"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_saldo" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_calculator_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calculator"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_2"
+                app:layout_constraintTop_toTopOf="@+id/tv_saldo_2" />
+
+            <TextView
+                android:id="@+id/tv_saldo_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:fontFamily="@font/quicksand_light"
+                android:gravity="center"
+                android:text="Você economizou R$ 15,00 nos últimos 30 dias"
+                android:textColor="#616161"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/aciv_calculator_qrcode"
+                app:layout_constraintTop_toBottomOf="@+id/iv_qr_code_input" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_time_bonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_time_clock"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_relo"
+                app:layout_constraintStart_toStartOf="@+id/aciv_calculator_qrcode"
+                app:layout_constraintTop_toTopOf="@+id/tv_relo" />
+
+            <TextView
+                android:id="@+id/tv_relo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_light"
+                android:gravity="center"
+                android:text="55 minutos de bônus nos últimos 30 dias"
+                android:textColor="#616161"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_saldo_2"
+                app:layout_constraintStart_toEndOf="@+id/aciv_time_bonus"
+                app:layout_constraintTop_toBottomOf="@+id/tv_saldo_2" />
+
+            <TextView
+                android:id="@+id/tv_saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_light"
+                android:text="23 minutos"
+                android:textColor="#616161"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_balance" />
+
+            <TextView
+                android:id="@+id/tv_tlitle_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/tv_tlitle_balance_qrcode"
+                android:textColor="#F54800"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cm_profile" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cm_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="26dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/colorStrokeCardView"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_client_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="@string/tv_title_client_check_qrcode"
+                        android:textColor="@color/colorTextView"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/aciv_entrs"
+                        app:layout_constraintStart_toEndOf="@+id/tv_hello_profile"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_hello_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Olá,"
+                        android:textColor="#111"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/aciv_discount_benefit"
+                        app:layout_constraintStart_toEndOf="@+id/aciv_discount_benefit"
+                        app:layout_constraintTop_toTopOf="@+id/aciv_discount_benefit" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/aciv_entrs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:src="@drawable/ic_arrow_indication"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_title_client_check"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_client_check" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/aciv_discount_benefit"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="26dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ic_profile_picture"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_hello_profile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

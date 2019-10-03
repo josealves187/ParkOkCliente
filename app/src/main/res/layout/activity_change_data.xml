@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.ChangeDataActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_change_registrion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow"
+        app:title="@string/title_toolbar_change_data"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"
+        app:titleTextColor="@color/color_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_change_registrion">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ed_change_cpf"
+                style="@style/MaterialEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="36dp"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_change_password" />
+
+            <TextView
+                android:id="@+id/ed_change_email"
+                style="@style/MaterialEditTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="26dp"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_change_cpf"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <TextView
+                android:id="@+id/tv_field_password"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="26dp"
+                android:hint="@string/tv_title_change_hint"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_title_register_chagen" />
+
+            <EditText
+                android:id="@+id/et_change_password"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="36dp"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_title__chagen_photo" />
+
+            <TextView
+                android:id="@+id/btn_title_register_chagen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="@string/tv_title_change_password"
+                android:textColor="@color/colorNameTextView"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_change_email" />
+
+            <TextView
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_password_btn"
+                app:layout_constraintBottom_toTopOf="@+id/tv_field_password"
+                app:layout_constraintStart_toStartOf="@+id/tv_field_password" />
+
+            <TextView
+                android:id="@+id/tv_change_password"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="26dp"
+                android:layout_marginRight="26dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/tv_title_change_btn"
+                android:textColor="@color/colorNameTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_field_password"
+                app:layout_constraintEnd_toEndOf="@+id/tv_field_password"
+                app:layout_constraintTop_toTopOf="@+id/tv_field_password" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_email"
+                app:layout_constraintBottom_toTopOf="@+id/ed_change_email"
+                app:layout_constraintStart_toStartOf="@+id/ed_change_email" />
+
+            <TextView
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_cpf"
+                app:layout_constraintBottom_toTopOf="@+id/ed_change_cpf"
+                app:layout_constraintStart_toStartOf="@+id/ed_change_cpf" />
+
+            <TextView
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/tv_title_change_name"
+                app:layout_constraintBottom_toTopOf="@+id/et_change_password"
+                app:layout_constraintStart_toStartOf="@+id/et_change_password" />
+
+            <TextView
+                android:id="@+id/btn_title__chagen_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/tv_title_change_photo"
+                android:textColor="@color/colorNameTextView"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/aciv_photo_user_detais"
+                app:layout_constraintStart_toStartOf="@+id/aciv_photo_user_detais"
+                app:layout_constraintTop_toBottomOf="@+id/aciv_photo_user_detais" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_change_password"
+                style="@style/MaterialButtonTheme"
+                android:layout_width="268dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="46dp"
+                android:padding="12dp"
+                android:text="@string/register_change_botao"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_field_password"
+                app:layout_constraintStart_toStartOf="@+id/tv_field_password"
+                app:layout_constraintTop_toBottomOf="@+id/tv_field_password" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/aciv_photo_user_detais"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_profile_picture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

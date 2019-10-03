@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.RegisterActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_recover_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_toolbar_registr"
+        app:titleTextColor="@color/color_toolbar"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_recover_password">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Nome completo"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/tv_name"
+                app:layout_constraintStart_toStartOf="@+id/tv_name" />
+
+            <EditText
+                android:id="@+id/tv_name"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_title_cpf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="CPF"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/tv_cpf"
+                app:layout_constraintStart_toStartOf="@+id/tv_cpf" />
+
+            <EditText
+                android:id="@+id/tv_cpf"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+
+            <TextView
+                android:id="@+id/tv_title_email_registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="E-mail"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/tv_email_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_register" />
+
+            <EditText
+                android:id="@+id/tv_email_register"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cpf" />
+
+            <TextView
+                android:id="@+id/tv_title_password_registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Senha"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/tv_password_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_password_register" />
+
+            <EditText
+                android:id="@+id/tv_password_register"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_register" />
+
+            <TextView
+                android:id="@+id/tv_title_confirm_password_registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="Confirmar senha"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/tv_confirm_password"
+                app:layout_constraintStart_toStartOf="@+id/tv_confirm_password" />
+
+            <EditText
+                android:id="@+id/tv_confirm_password"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginTop="40dp"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password_register" />
+
+            <CheckBox
+                android:id="@+id/ch_terms_of_use"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:text="Li e aceito os TERMOS DE USO"
+                android:buttonTint="@color/colorTextView"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_password" />
+
+            <CheckBox
+                android:id="@+id/cb_privacy_policies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:buttonTint="@color/colorTextView"
+                android:text="Li e aceito as POLÍTICAS DE PRIVACIDADE"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ch_terms_of_use" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_send"
+                style="@style/MaterialButtonTheme"
+                android:layout_marginBottom="36dp"
+                android:text="CADASTRAR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_privacy_policies"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

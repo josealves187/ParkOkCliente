@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.ConfirmationCodeActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_confirmation_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_toolbar_confirmation_code"
+        app:titleTextColor="@color/color_toolbar"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"/>
+
+    <TextView
+        android:id="@+id/tv_confirmation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="36dp"
+        android:textColor="#636363"
+        android:fontFamily="@font/quicksand_regular"
+        android:text="Enviamos para o e-mail informado um código de ativação para a confirmação do seu e-mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_confirmation_code" />
+
+    <TextView
+        android:id="@+id/tv_confirmation_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center"
+        android:text="Por favor informe o código abaixo"
+        android:textColor="#636363"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmation" />
+
+    <TextView
+        android:id="@+id/tv_title_confirmation_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center"
+        android:text="Código de confirmação"
+        android:textColor="#636363"
+        app:layout_constraintBottom_toTopOf="@+id/et_pin_entry"
+        app:layout_constraintStart_toStartOf="@+id/et_pin_entry" />
+
+
+    <br.com.crosoften.parkokcliente.view.custom.PinEntryEditText
+        android:id="@+id/et_pin_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="36dp"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@color/colorTextView"
+        app:bottomLineNormalColor="@color/gravy_light"
+        app:bottomLineSelectedColor="@color/colorAccent"
+        app:cursorColor="@android:color/holo_purple"
+        app:selectedBackgroundColor="@color/colorPrimary_alpha33"
+        app:verCodeMargin="10dp"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/bnt_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmation_code" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bnt_check"
+        style="@style/MaterialButtonTheme"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="VERIFICAR"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/et_pin_entry"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="@+id/et_pin_entry"
+        app:layout_constraintTop_toBottomOf="@+id/et_pin_entry" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

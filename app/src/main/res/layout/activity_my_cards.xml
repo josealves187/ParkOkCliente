@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.MyCardsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_my_cards"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/title_toolbar_my_cards"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"
+        app:titleTextColor="@color/color_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_my_cards">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_payment_cards"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="18dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/tv_title_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="26dp"
+                android:text="@string/tv_title_cards"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_payment_cards" tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tv_tile_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="@string/tv_tile_card"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/ed_number_card"
+                app:layout_constraintStart_toStartOf="@+id/ed_number_card" tools:targetApi="jelly_bean" />
+
+            <EditText
+                android:id="@+id/ed_number_card"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:drawableEnd="@drawable/ic_visa"
+                android:drawableRight="@drawable/ic_visa"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_cards" />
+
+            <TextView
+                android:id="@+id/tv_title_cardholder_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="@string/title_cardholder_name"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/tv_cardholder_name"
+                app:layout_constraintStart_toStartOf="@+id/tv_cardholder_name" />
+
+            <EditText
+                android:id="@+id/tv_cardholder_name"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_number_card"
+                android:importantForAutofill="no" />
+
+
+            <TextView
+                android:id="@+id/tv_shelf_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="@string/tv_title_shelf_life"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/et_shelf_life"
+                app:layout_constraintStart_toStartOf="@+id/et_shelf_life" tools:targetApi="jelly_bean" />
+
+            <EditText
+                android:id="@+id/et_shelf_life"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cardholder_name"
+                />
+
+            <TextView
+                android:id="@+id/tv_title_cvc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="@string/tv_title_cvc"
+                android:textColor="@color/colorTextViewText"
+                app:layout_constraintBottom_toTopOf="@+id/et_cvc"
+                app:layout_constraintStart_toStartOf="@+id/et_cvc" />
+
+            <EditText
+                android:id="@+id/et_cvc"
+                style="@style/MaterialTextViewTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_shelf_life"
+                android:autofillHints="" tools:targetApi="o" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_regist_cards"
+                style="@style/MaterialButtonTheme"
+                android:layout_marginBottom="36dp"
+                android:text="@string/btn_regist_my_cards"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_cvc"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

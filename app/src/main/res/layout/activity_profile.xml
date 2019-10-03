@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="56dp"
+    tools:context=".view.activities.ProfileActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_profile">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_registration_dat"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:text="Dados cadastrais"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_profile"
+                app:layout_constraintStart_toEndOf="@+id/aciv_profile"
+                app:layout_constraintTop_toTopOf="@+id/aciv_profile" />
+
+
+            <TextView
+                android:id="@+id/tv_title_my_cards"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:layout_marginLeft="19dp"
+                android:text="Meus cartões"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_tutorial_and_faq_profile"
+                app:layout_constraintStart_toEndOf="@+id/aciv_tutorial_and_faq_profile"
+                app:layout_constraintTop_toTopOf="@+id/aciv_tutorial_and_faq_profile" />
+
+            <TextView
+                android:id="@+id/tv_title_contact_us"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:text="Fale conosco"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_calculator_qrcode"
+                app:layout_constraintStart_toEndOf="@+id/aciv_calculator_qrcode"
+                app:layout_constraintTop_toTopOf="@+id/aciv_calculator_qrcode" />
+
+            <TextView
+                android:id="@+id/tv_title_about_the_app"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:text="Sobre o app"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_i_usage_policies_profile"
+                app:layout_constraintStart_toEndOf="@+id/aciv_i_usage_policies_profile"
+                app:layout_constraintTop_toTopOf="@+id/aciv_i_usage_policies_profile" />
+
+            <TextView
+                android:id="@+id/tv_title_use_terms_profile"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:text="Termos de uso"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_i_privacy_terms_profile"
+                app:layout_constraintStart_toEndOf="@+id/aciv_i_privacy_terms_profile"
+                app:layout_constraintTop_toTopOf="@+id/aciv_i_privacy_terms_profile" />
+
+
+            <TextView
+                android:id="@+id/tv_title_privacy_policies"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:text="Políticas de privacidade"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_i_privacy_terms"
+                app:layout_constraintStart_toEndOf="@+id/aciv_i_privacy_terms"
+                app:layout_constraintTop_toTopOf="@+id/aciv_i_privacy_terms" />
+
+            <TextView
+                android:id="@+id/tv_title_exit_profile"
+                style="@style/MaterialTexteViewTheme"
+                android:layout_width="340dp"
+                android:layout_marginLeft="20dp"
+                android:text="Sair"
+                app:layout_constraintBottom_toBottomOf="@+id/aciv_i_exit_profile"
+                app:layout_constraintStart_toEndOf="@+id/aciv_i_exit_profile"
+                app:layout_constraintTop_toTopOf="@+id/aciv_i_exit_profile" />
+
+            <View
+                android:id="@+id/v_menu_profile"
+                style="@style/MaterialViewStyleTheme"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_registration_dat" />
+
+            <View
+                android:id="@+id/v_menu_title_faq"
+                style="@style/MaterialViewStyleTheme"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_my_cards" />
+
+
+            <View
+                android:id="@+id/v_menu_title_about"
+                style="@style/MaterialViewStyleTheme"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_contact_us" />
+
+
+            <View
+                android:id="@+id/v_usage_policies"
+                style="@style/MaterialViewStyleTheme"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_about_the_app" />
+
+            <View
+                android:id="@+id/v_privacy_terms"
+                style="@style/MaterialViewStyleTheme"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_use_terms_profile" />
+
+
+            <View
+                android:id="@+id/kk"
+                style="@style/MaterialViewStyleTheme"
+                android:layout_marginBottom="26dp"
+                android:background="#B9B9B9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aciv_i_privacy_terms" />
+
+            <View
+                style="@style/MaterialViewStyleTheme"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_exit_profile" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/ic_menu_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/ic_arrow_indication"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_registration_dat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_registration_dat" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_tutorial_and_faq_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_my_cards"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_menu_profile" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/ic_arrow_indication"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_my_cards"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_my_cards" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_calculator_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_tutorial_and_faq_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_menu_title_faq" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/ic_arrow_indication"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_contact_us"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_contact_us" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_i_usage_policies_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_about_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_menu_title_about" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/ic_arrow_indication"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_about_the_app"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_about_the_app" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_i_privacy_terms_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_usage_policies_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_usage_policies" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/ic_arrow_indication"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_use_terms_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_use_terms_profile" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_i_privacy_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_usage_policies_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_privacy_terms" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="26dp"
+                android:src="@drawable/ic_arrow_indication"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title_use_terms_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_use_terms_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_i_exit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="56dp"
+                android:src="@drawable/ic_exit_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kk" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mt_toolbar_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        app:navigationIcon="@drawable/ic_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextAppearance="@style/MaterialToolbarMenuStyleTheme">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_hello_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Olá,"
+                android:textColor="#111"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/civ_photo_profile"
+                app:layout_constraintStart_toEndOf="@+id/civ_photo_profile"
+                app:layout_constraintTop_toTopOf="@+id/civ_photo_profile" />
+
+            <TextView
+                android:id="@+id/tv_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:fontFamily="@font/quicksand_light"
+                android:text="João Carlos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_hello_profile"
+                app:layout_constraintStart_toEndOf="@+id/tv_hello_profile"
+                app:layout_constraintTop_toTopOf="@+id/tv_hello_profile" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_photo_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_profile_picture"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

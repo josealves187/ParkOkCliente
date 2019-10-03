@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.QRCodeUser.QRCodePostReadingActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/mt_toolbar_post_qrcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_arrow"
+                app:title="@string/title_toolbar_post_qecode"
+                app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens"
+                app:titleTextColor="@color/color_toolbar" />
+
+
+            <TextView
+                android:id="@+id/tv_tlitle_saldo"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:gravity="center"
+                android:fontFamily="@font/quicksand_light"
+                android:text="Rua Machado de Assis, 550 - Martins Uberlândia - MG"
+                android:textColor="#616161"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_post_qrcode" />
+
+            <TextView
+                android:id="@+id/tv_tlitle_telefone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="(34) 3210 - 7654"
+                android:textColor="#616161"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_saldo"
+                app:layout_constraintStart_toStartOf="@+id/tv_tlitle_saldo"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_saldo" />
+
+            <ImageView
+                android:id="@+id/aciv_discount_benefit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/ic_parking_post_qrcode"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_telefone"
+                app:layout_constraintStart_toStartOf="@+id/tv_tlitle_telefone"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_telefone" />
+
+            <TextView
+                android:id="@+id/tv_tlitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/quicksand_light"
+                android:gravity="center"
+                android:text="Você esta no"
+                android:textColor="#616161"
+                app:layout_constraintEnd_toEndOf="@+id/aciv_discount_benefit"
+                app:layout_constraintStart_toStartOf="@+id/aciv_discount_benefit"
+                app:layout_constraintTop_toBottomOf="@+id/aciv_discount_benefit" />
+
+
+            <TextView
+                android:id="@+id/tv_tlitle_local"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="ESTACIONAMENTO AUTO PARK"
+                android:textColor="#F54800"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tlitle"
+                app:layout_constraintStart_toStartOf="@+id/tv_tlitle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle" />
+
+            <TextView
+                android:id="@+id/tv_tlitle_hora"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/quicksand_light"
+                android:gravity="center"
+                android:text="Horário de funcionamento hoje:"
+                android:textColor="#616161"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_local"
+                app:layout_constraintStart_toStartOf="@+id/tv_tlitle_local"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_local" />
+
+            <TextView
+                android:id="@+id/tv_tlitle_hora_k"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="07:30 - 18:00"
+                android:textColor="#616161"
+                app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_hora"
+                app:layout_constraintStart_toStartOf="@+id/tv_tlitle_hora"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_hora" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cm_intput"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/colorStrokeCardView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_hora_k"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_title_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:fontFamily="@font/quicksand_light"
+                        android:gravity="center"
+                        android:text="ENTRADA"
+                        android:textColor="@color/colorTextViewText"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_title_input_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="1dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center"
+                        android:text="10:36 - 08/08/19"
+                        android:textColor="@color/colorTextViewText"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_title_input"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_input" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cm_boad"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/colorStrokeCardView"
+                app:layout_constraintTop_toBottomOf="@+id/cm_intput"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_title_boad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_light"
+                        android:gravity="center"
+                        android:text="PLACA"
+                        android:textColor="@color/colorTextViewText"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="1dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center"
+                        android:text="ABC-1234"
+                        android:textColor="@color/colorTextViewText"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_title_boad"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_boad" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cm_balande_available"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/colorStrokeCardView"
+                app:layout_constraintTop_toBottomOf="@+id/cm_boad"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tv_title_balande_available"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_light"
+                        android:gravity="center"
+                        android:text="SALDO DISPONÍVEL"
+                        android:textColor="@color/colorTextViewText"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_balande_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="18dp"
+                        android:layout_marginRight="1dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center"
+                        android:text="23 MINUTOS"
+                        android:textColor="@color/colorTextViewText"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_title_balande_available"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_title_balande_available" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cm_qrcode_exti"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="28dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cm_balande_available"
+                android:backgroundTint="#707070"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_title_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="QR CODE PARA SAÍDA"
+                        android:textColor="#ffff"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/aciv_car_type"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/aciv_car_type"
+                        app:layout_constraintTop_toTopOf="@id/aciv_car_type" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/aciv_car_type"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ic_qcode"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_title_car"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
