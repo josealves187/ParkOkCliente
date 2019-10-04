@@ -41,7 +41,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="Nome completo"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/tv_name"
                 app:layout_constraintStart_toStartOf="@+id/tv_name" />
 
@@ -70,7 +70,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="CPF"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/tv_cpf"
                 app:layout_constraintStart_toStartOf="@+id/tv_cpf" />
 
@@ -99,7 +99,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="E-mail"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/tv_email_register"
                 app:layout_constraintStart_toStartOf="@+id/tv_email_register" />
 
@@ -127,7 +127,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="Senha"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/tv_password_register"
                 app:layout_constraintStart_toStartOf="@+id/tv_password_register" />
 
@@ -155,7 +155,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="Confirmar senha"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/tv_confirm_password"
                 app:layout_constraintStart_toStartOf="@+id/tv_confirm_password" />
 

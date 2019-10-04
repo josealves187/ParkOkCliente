@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import br.com.crosoften.parkokcliente.R;
 
@@ -21,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     private TextView tvForgotMyPassword;
     private Button bnt_send;
 
-    private EditText tvEmail;
-    private EditText tvPasswor;
+    private TextInputEditText tvEmail;
+    private TextInputEditText tvPasswor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,40 +57,17 @@ public class LoginActivity extends AppCompatActivity {
         bnt_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String user = tvEmail.getText().toString();
-//                String password = tvPasswor.getText().toString();
-//                boolean validCredential = true;
-//                if (!user.equals("teste@gmail.com")) {
-//                    validCredential = false;
-//                    tvEmail.setError("Informe seu e-mail.");
-//                    tvEmail.requestFocus();
-//                } else {
-//                    tvEmail.setError(null);
-//                }
-//
-//                if (!password.equals(("123456"))) {
-//                    validCredential = false;
-//                    tvPasswor.setError(("Digite sua senha primeiro!"));
-//                    tvPasswor.requestFocus();
-//                } else {
-//                    tvPasswor.setError(null);
-//                }
-//
-//                if (validCredential) {
+                checkUserName();
 
-                onBackPressed();
-                calledScreen();
             }
-
-//            }
 
         });
     }
 
     private void initializeComponents() {
         bnt_send = findViewById(R.id.btn_input);
-        tvEmail = findViewById(R.id.tv_email);
-        tvPasswor = findViewById(R.id.tv_Passwor);
+        tvEmail = findViewById(R.id.tv_tiet_emali);
+        tvPasswor = findViewById(R.id.tv_tiet_Passwor);
         btnRegister = findViewById(R.id.btn_register);
         tvForgotMyPassword = findViewById(R.id.tv_title_forgot_my_password);
     }
@@ -97,13 +76,69 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
         editor.putInt("SCREEN_ORIGEN", 1);
         editor.commit();
-        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-        startActivity(i);
         super.onBackPressed();
     }
 
     private void calledScreen() {
         Intent i = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(i);
+    }
+
+    private void checkUserName() {
+
+        String emailAddress = tvEmail.getText().toString().trim();
+        if (tvPasswor.getText().toString().length() < 6) {
+            tvPasswor.setError("Senha mínima contém 6 caracteres!");
+            tvPasswor.requestFocus();
+        }
+        if (tvPasswor.getText().toString().equals("")) {
+            tvPasswor.setError("por favor digite a senha!");
+            tvPasswor.requestFocus();
+        }
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
+            tvEmail.setError("Por favor insira o endereço de e-mail válido!");
+            tvEmail.requestFocus();
+        }
+        if (tvEmail.getText().toString().equals("")) {
+            tvEmail.setError("Digite o endereço de e-mail!");
+            tvEmail.requestFocus();
+        }
+        if (!emailAddress.equals("") &&
+                tvPasswor.getText().toString().length() >= 6 &&
+                !tvPasswor.getText().toString().trim().equals("")
+                && android.util.Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
+            //verificar e-mail e tvPasswor
+            //IMPORTANTE: aqui deve ser chamada a função de back-end ou mais segura para verificação
+            // local; Por exemplo, simples verificação
+            //Por exemplo, simples verificação
+
+            String usernameValue = tvEmail.getText().toString();
+            String passwordValue = tvPasswor.getText().toString();
+            boolean validCredential = true;
+            if (!usernameValue.equals("teste@gmail.com")) {
+                validCredential = false;
+                tvEmail.setError("Email não cadastrado");
+            } else {
+                tvEmail.setError(null);
+            }
+
+            if (!passwordValue.equals("123456")) {
+                validCredential = false;
+                tvPasswor.setError(("Senhas dados invalidos!"));
+
+            } else {
+                tvPasswor.setError(null);
+            }
+
+            if (validCredential) {
+                //everything checked we open new activity
+                calledScreen();
+
+                Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
+                //we close this activity
+                this.finish();
+            }
+        }
+
     }
 }

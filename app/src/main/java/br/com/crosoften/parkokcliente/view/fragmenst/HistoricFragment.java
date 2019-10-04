@@ -2,6 +2,7 @@ package br.com.crosoften.parkokcliente.view.fragmenst;
 
 
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +38,8 @@ public class HistoricFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_historic, container, false);
-
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         rvHistoric = view.findViewById(R.id.rv_historic);
         List<Historic> historics = new ArrayList<>();

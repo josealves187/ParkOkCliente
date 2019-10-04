@@ -52,7 +52,7 @@
                 android:gravity="center"
                 android:text="Você economizou R$ 15,00 nos últimos 30 dias"
                 android:textColor="#616161"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/aciv_calculator_qrcode"
                 app:layout_constraintTop_toBottomOf="@+id/iv_qr_code_input" />
@@ -76,7 +76,7 @@
                 android:gravity="center"
                 android:text="55 minutos de bônus nos últimos 30 dias"
                 android:textColor="#616161"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/tv_saldo_2"
                 app:layout_constraintStart_toEndOf="@+id/aciv_time_bonus"

@@ -48,7 +48,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         //inicializar componente
         initializeComponent();
         implementationInstance();
-        setSupportActionBar(mtToolbarProfile);
+
 
 
         mtToolbarProfile.setNavigationOnClickListener(new View.OnClickListener() {
@@ -92,6 +92,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         civPhotoProfile = findViewById(R.id.civ_photo_profile);
         tvNameProfile = findViewById(R.id.tv_name_profile);
         mtToolbarProfile = findViewById(R.id.mt_toolbar_profile);
+        setSupportActionBar(mtToolbarProfile);
     }
 
     private void implementationInstance() {

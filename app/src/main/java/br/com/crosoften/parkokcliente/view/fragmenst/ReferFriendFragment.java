@@ -1,6 +1,7 @@
 package br.com.crosoften.parkokcliente.view.fragmenst;
 
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -34,6 +35,8 @@ public class ReferFriendFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         View view = inflater.inflate(R.layout.fragment_refer_friend, container, false);
 

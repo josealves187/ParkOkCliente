@@ -79,7 +79,7 @@
                         android:textSize="18dp"
                         android:fontFamily="@font/montserrat_bold"
                         android:textColor="#fff"
-                        android:text="Versão instalada"
+                        android:text="@string/Installed_version"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
 
@@ -115,7 +115,7 @@
                         android:layout_marginStart="16dp"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="#FFFFFF"
-                        android:text="@string/text_terms_use"
+                        android:text="@string/text_about_the_app"
                         android:textAlignment="textStart"
                         app:layout_constraintTop_toBottomOf="@+id/tv_temos"
                         app:layout_constraintBottom_toBottomOf="parent"

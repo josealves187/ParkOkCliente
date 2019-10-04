@@ -3,6 +3,7 @@ package br.com.crosoften.parkokcliente.view.fragmenst;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -59,7 +60,8 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         tvSeeDetail = view.findViewById(R.id.tv_see_detail);
         mapView = view.findViewById(R.id.map);
         eventoButton();

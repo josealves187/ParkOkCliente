@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">ParkOkCliente</string>
+    <string name="app_name">Park Ok Cliente</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
+    <!-- menu QR code -->
     <string name="tltle_menu_qr_code">QR CODE</string>
+
+    <!-- menu map -->
     <string name="tltle_menu_map">MAPA</string>
+
+    <!-- title menu toolbar-->
     <string name="tltle_menu_historic">HISTÓRICO</string>
     <string name="tltle_menu_friend">INDICAR AMIGO</string>
     <string name="title_toolbar_qrcode_exit">QRCODE saída</string>
@@ -23,7 +28,7 @@
     <string name="title_toolbar_parking_details">Detalhes do estacionamento</string>
     <string name="tilte_privacy_policies_and_terms">Políticas de Privacidade e Termos de Uso</string>
 
-    <!-- tela de login e cadastro e recuperção de senha, alterar dados -->
+    <!-- tela de login e recuperção de senha,  -->
     <string name="btn_log_in_login">ENTRAR</string>
     <string name="tv_register_login_Not_registered_yet">Ainda não possui cadastro?</string>
     <string name="tv_title_login">LOGIN</string>
@@ -31,6 +36,8 @@
     <string name="title_email_login">E-mail</string>
     <string name="forgot_my_password_login">Esqueci minha senha!</string>
     <string name="register_login">CADASTRE-SE</string>
+
+    <!-- tela  recuperção de cadastro-->
     <string name="register_profile">ALTERAR DADOS</string>
     <string name="register_change_botao">SALVAR</string>
     <string name="tv_title_change_name">Nome completo</string>
@@ -38,16 +45,20 @@
     <string name="tv_title_change_email">E-mail</string>
     <string name="tv_title_change_password">Senha de acesso</string>
     <string name="tv_title_change_photo">Alterar foto</string>
+
+    <!-- tela  alterar dados-->
     <string name="tv_title_change_password_btn">Senha</string>
     <string name="tv_title_change_btn">ALTERAR</string>
     <string name="tv_title_change_hint">********</string>
 
+
+
     <string name="amount_numero">Final %s</string>
-
     <string name="tv_tell_your_friends">Indique aos seus amigos e ganhe 10 minutos de bônus</string>
-    <string name="tv_tell_codigo_friends">COMPARTILHAR</string>
 
 
+    <!-- tela  temos de uso-->
+    <string name="Installed_version">Versão instalada</string>
     <string name="title_toolbar_terms_of_use">Termos de uso</string>
     <string name="tv_text_terms_of_use">\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet.
@@ -57,6 +68,7 @@
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
 
+    <!-- tela  politica de privacidade-->
     <string name="title_toolbar_privacy_policies">Políticas de Privacidade</string>
     <string name="tv_text_privacy_policies">\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet.
@@ -66,7 +78,7 @@
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
 
-    <string name="text_terms_use">
+    <string name="text_about_the_app">
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -74,35 +86,59 @@
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        \nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </string>
-    <string name="title_cardholder_name">Nome do Titular</string>
-    <string name="tv_tile_card">Nº do Cartão</string>
+         </string>
+
+    <!--credit card screen-->
+    <string name="title_card_holder_name">Nome do Titular</string>
+    <string name="tv_text_tile_card">Nº do Cartão</string>
     <string name="tv_title_shelf_life">Validade</string>
     <string name="tv_title_cvc">CVV</string>
+    <string name="tv_text_title_cards">Novo cartão</string>
     <string name="btn_regist_my_cards">CADASTRAR</string>
+
+    <!-- adapter credit card screen -->
+    <string name="tv_to_remove_adpter_card">REMOVER</string>
+    <string name="tv_title_change_adpter">ALTERAR</string>
+
+
+    <!-- tela Change Password Activity -->
     <string name="tv_title_guidance_chage_password">Enviaremos um e-mail de recuperação para o seu e-mail ex****@email.com</string>
+    <string name="title_reciver_password_change">Quer alterar a senha?</string>
     <string name="tv_title_fill_address_change_data">Por favor p reencha o endereço abaixo:</string>
     <string name="tv_title_email_change">Seu e-mail</string>
-    <string name="title_reciver_password_change">Quer alterar a senha?</string>
     <string name="btn_input_change">enviar</string>
+
+    <!-- Contact Activity -->
     <string name="tv_title_contact">Deixe sua mensagem que logo entraremos em contato!</string>
     <string name="tv_title_subject_matter">Assunto</string>
     <string name="tv_tltle_chat">Assunto</string>
     <string name="mbm_register_contact">ENVIAR</string>
-    <string name="tv_title_cards">Novo cartão</string>
+
+
+    <!-- tela QRcode Fragment -->
     <string name="tv_tlitle_balance_qrcode">Seu saldo</string>
     <string name="tv_title_client_check_qrcode">VER PERFIL</string>
-    <string name="tv_to_remove_adpter_card">REMOVER</string>
-    <string name="tv_title_change_adpter">ALTERAR</string>
+
+
+    <!--  tela refer friends -->
     <string name="btn_title_code">A X 5 C 7 8</string>
+    <string name="Share_code_friends">Compartilhe seu código com seus amigos e após utilizarem na primeira estadia você ganhará 10 minutos pela indicação!</string>
+    <string name="tv_tell_codigo_friends">COMPARTILHAR</string>
+    <string name="enter_friend_code">Inserir código de um amigo</string>
+    <string name="activate_code">ATIVAR CÓDIGO</string>
+
+
+
+    <!-- adapter historic -->
     <string name="tv_type_service_title">Desconto - Estacionamento Dias</string>
     <string name="tv_permanence_historic">Permanência</string>
     <string name="tv_amount_historic">valor total</string>
     <string name="tv_discounr_historic">Desconto</string>
+
+    <!-- tela QRCode Post Reading Activity -->
+    <string name="tltle_warning_post_qrcode">Você esta no</string>
+    <string name="input_botton_qrcode">ENTRADA</string>
+
+
 
 </resources>

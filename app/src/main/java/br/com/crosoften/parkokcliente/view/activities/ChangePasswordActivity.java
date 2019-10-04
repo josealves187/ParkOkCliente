@@ -15,7 +15,7 @@ import br.com.crosoften.parkokcliente.R;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
-    private EditText recoverPassword;
+    private EditText tvRecoverPassword;
     private MaterialButton inputChangePassword;
 
     @Override
@@ -35,16 +35,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         inputChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                boolean validCredential = true;
-                if (recoverPassword.getText().toString().equals("")) {
-                    recoverPassword.setError("Preencha E-mail!");
-                    recoverPassword.requestFocus();
-                }else if (validCredential){
-                    Toast.makeText(ChangePasswordActivity.this, "Senha Enviada com sucesso", Toast.LENGTH_SHORT).show();
-                    calledRegistrationScreen();
-                }
+            public void onClick(View v){
+            checkUserName();
 
 
             }
@@ -62,8 +54,36 @@ public class ChangePasswordActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recoverPassword =  findViewById(R.id.tv_screen_recover_password);
+        tvRecoverPassword =  findViewById(R.id.tv_screen_recover_password);
         inputChangePassword =  findViewById(R.id.input_change_password);
 
+    }
+
+    private void checkUserName() {
+        String emailAddress = tvRecoverPassword.getText().toString().trim();
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
+            tvRecoverPassword.setError("Por favor insira o endereço de e-mail válido!");
+            tvRecoverPassword.requestFocus();
+        }
+        if (tvRecoverPassword.getText().toString().equals("")) {
+            tvRecoverPassword.setError("Digite o endereço de e-mail!");
+            tvRecoverPassword.requestFocus();
+        }
+
+        String usernameValue = tvRecoverPassword.getText().toString().trim();
+        boolean validCredential = true;
+        if (!usernameValue.equals("teste@gmail.com")) {
+            validCredential = false;
+            tvRecoverPassword.setError("Email não cadastrado");
+        }
+
+        if (validCredential) {
+            //everything checked we open new activity
+            calledRegistrationScreen();
+
+            Toast.makeText(this, "Senha enviada para seu Email", Toast.LENGTH_SHORT).show();
+            //we close this activity
+            this.finish();
+        }
     }
 }

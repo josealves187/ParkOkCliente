@@ -46,9 +46,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="26dp"
-                android:text="@string/tv_title_cards"
+                android:text="@string/tv_text_title_cards"
                 android:fontFamily="@font/quicksand_bold"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rcv_payment_cards" tools:targetApi="jelly_bean" />
@@ -61,8 +61,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
-                android:text="@string/tv_tile_card"
-                android:textColor="@color/colorTextViewText"
+                android:text="@string/tv_text_tile_card"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/ed_number_card"
                 app:layout_constraintStart_toStartOf="@+id/ed_number_card" tools:targetApi="jelly_bean" />
 
@@ -91,8 +91,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
-                android:text="@string/title_cardholder_name"
-                android:textColor="@color/colorTextViewText"
+                android:text="@string/title_card_holder_name"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/tv_cardholder_name"
                 app:layout_constraintStart_toStartOf="@+id/tv_cardholder_name" />
 
@@ -122,7 +122,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="@string/tv_title_shelf_life"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/et_shelf_life"
                 app:layout_constraintStart_toStartOf="@+id/et_shelf_life" tools:targetApi="jelly_bean" />
 
@@ -151,7 +151,7 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/quicksand_regular"
                 android:text="@string/tv_title_cvc"
-                android:textColor="@color/colorTextViewText"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintBottom_toTopOf="@+id/et_cvc"
                 app:layout_constraintStart_toStartOf="@+id/et_cvc" />
 

@@ -11,14 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".view.activities.MyCardsActivity"></activity>
+        <activity android:name=".view.activities.MyCardsActivity"/>
         <activity android:name=".view.activities.ParkingDetailsActivity" />
         <activity
             android:name=".view.activities.QRCodeUser.QRCodeExitActivity"
             android:parentActivityName=".view.activities.QRCodeUser.QRCodePostReadingActivity" />
         <activity
             android:name=".view.activities.ChangePasswordActivity"
-            android:parentActivityName=".view.activities.ChangeDataActivity" />
+            android:parentActivityName=".view.activities.ChangeDataActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".view.activities.ContactActivity"
             android:parentActivityName=".view.activities.ProfileActivity" />
@@ -35,7 +36,8 @@
         <activity
             android:name=".view.activities.QRCodeUser.QRCodePostReadingActivity"
             android:parentActivityName=".view.activities.HomeActivity" />
-        <activity android:name=".view.activities.HomeActivity" />
+        <activity android:name=".view.activities.HomeActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".view.activities.ConfirmationCodeActivity"
             android:parentActivityName=".view.activities.RegisterActivity" />
@@ -47,9 +49,11 @@
             android:parentActivityName=".view.activities.LoginActivity" />
         <activity
             android:name=".view.activities.RecoverPasswordActivity"
-            android:parentActivityName=".view.activities.LoginActivity" />
+            android:parentActivityName=".view.activities.LoginActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".view.activities.LoginActivity" />
-        <activity android:name=".view.activities.SplashScreenActivity">
+        <activity android:name=".view.activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -81,7 +81,7 @@
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/quicksand_bold"
                         android:text="@string/tv_register_login_Not_registered_yet"
-                        android:textColor="@color/colorTextViewText"
+                        android:textColor="@color/colorNameTextView"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/btn_register"
                         app:layout_constraintEnd_toEndOf="@+id/btn_register"
@@ -125,37 +125,52 @@
                     android:layout_height="wrap_content">
 
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tv_Passwor"
-                        style="@style/MaterialTextViewTheme"
+                        style="@style/TextInputLayoutTheme"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="18dp"
-                        android:layout_marginTop="40dp"
+                        android:layout_marginTop="26dp"
                         android:layout_marginEnd="18dp"
-                        android:layout_marginBottom="40dp"
-                        android:inputType="textPassword"
-                        android:padding="12dp"
-                        android:textSize="18sp"
+                        app:errorEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_email">
 
-                    <EditText
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tv_tiet_Passwor"
+                            style="@style/TextInputTextTheme"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:padding="12dp"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tv_email"
-                        style="@style/MaterialTextViewTheme"
+                        style="@style/TextInputLayoutTheme"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="18dp"
-                        android:layout_marginTop="40dp"
+                        android:layout_marginTop="50dp"
                         android:layout_marginEnd="18dp"
-                        android:inputType="textEmailAddress"
-                        android:padding="12dp"
-                        android:textSize="18sp"
+                        app:errorEnabled="true"
                         app:layout_constraintBottom_toTopOf="@+id/tv_Passwor"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_login">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tv_tiet_emali"
+                            style="@style/TextInputTextTheme"
+                            android:imeOptions="actionNext"
+                            android:inputType="textImeMultiLine"
+                            android:padding="12dp"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
                         android:id="@+id/tv_title_Passwor"
@@ -164,7 +179,7 @@
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/quicksand_regular"
                         android:text="@string/password_login"
-                        android:textColor="@color/colorTextViewText"
+                        android:textColor="@color/colorNameTextView"
                         app:layout_constraintBottom_toTopOf="@+id/tv_Passwor"
                         app:layout_constraintEnd_toEndOf="@+id/tv_Passwor"
                         app:layout_constraintHorizontal_bias="0.07"
@@ -178,7 +193,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="42dp"
                         android:text="@string/tv_title_login"
-                        android:textColor="@color/colorTextViewText"
+                        android:textColor="@color/colorNameTextView"
                         android:textSize="24sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +209,7 @@
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/quicksand_regular"
                         android:text="@string/title_email_login"
-                        android:textColor="@color/colorTextViewText"
+                        android:textColor="@color/colorNameTextView"
                         app:layout_constraintBottom_toTopOf="@+id/tv_email"
                         app:layout_constraintStart_toStartOf="@+id/tv_email" />
 
@@ -205,7 +220,7 @@
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/quicksand_regular"
                         android:text="@string/forgot_my_password_login"
-                        android:textColor="@color/colorTextViewText"
+                        android:textColor="@color/colorNameTextView"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="@+id/tv_Passwor"
                         app:layout_constraintStart_toStartOf="@+id/tv_Passwor"

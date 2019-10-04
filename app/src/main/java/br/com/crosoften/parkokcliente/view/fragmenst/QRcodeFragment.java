@@ -2,6 +2,7 @@ package br.com.crosoften.parkokcliente.view.fragmenst;
 
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
@@ -44,6 +45,9 @@ public class QRcodeFragment extends Fragment implements QrCodeListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_qrcode, container, false);
         cmProfile = view.findViewById(R.id.cm_profile);
