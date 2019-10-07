@@ -22,6 +22,7 @@
     <string name="title_toolbar_about_the_app">Sobre app</string>
     <string name="title_toolbar_registr">Cadastro</string>
     <string name="title_toolbar_my_cards">Meus cartões</string>
+    <string name="title_toolbar_search_parking">Estacionamentos</string>
     <string name="title_toolbar_historic">HISTÓRICO</string>
     <string name="title_toolbar_referf_friends">INDICAR AMIGOS</string>
     <string name="title_toolbar_contact">Fale conosco</string>
@@ -50,7 +51,6 @@
     <string name="tv_title_change_password_btn">Senha</string>
     <string name="tv_title_change_btn">ALTERAR</string>
     <string name="tv_title_change_hint">********</string>
-
 
 
     <string name="amount_numero">Final %s</string>
@@ -128,7 +128,6 @@
     <string name="activate_code">ATIVAR CÓDIGO</string>
 
 
-
     <!-- adapter historic -->
     <string name="tv_type_service_title">Desconto - Estacionamento Dias</string>
     <string name="tv_permanence_historic">Permanência</string>
@@ -138,7 +137,7 @@
     <!-- tela QRCode Post Reading Activity -->
     <string name="tltle_warning_post_qrcode">Você esta no</string>
     <string name="input_botton_qrcode">ENTRADA</string>
-
+    <string name="confirmar_senh_register">Confirmar senha</string>
 
 
 </resources>

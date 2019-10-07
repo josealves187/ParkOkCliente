@@ -22,14 +22,16 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        mbnvMenu = findViewById(R.id.bnv_menu);
-        mVpContent = findViewById(R.id.vp_content);
+        initComponents();
         mbnvMenu.setOnNavigationItemSelectedListener(this);
 
         initViewPager();
     }
 
-
+    private void initComponents() {
+        mbnvMenu = findViewById(R.id.bnv_menu);
+        mVpContent = findViewById(R.id.vp_content);
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

@@ -36,18 +36,34 @@
                 android:layout_height="match_parent"
                 android:background="#A1FFFFFF">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:gravity="center"
-                    android:text="Estacionamentos próximos a você!"
-                    android:textColor="#F54800"
+                <EditText
+                    android:id="@+id/ed_map_shearch"
+                    style="@style/MaterialEditTextTheme"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#A1FFFFFF"
+                    android:ellipsize = "start"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:hint="Estacionamentos próximos a você!"
+                    android:textColorHint="@color/colorTitleTextView"
+                    android:textSize="16sp"
                     card_view:layout_constraintBottom_toBottomOf="parent"
-                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintEnd_toStartOf="@+id/imageView"
                     card_view:layout_constraintStart_toStartOf="parent"
                     card_view:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_search"
+                    android:background="#A1FFFFFF"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/ed_map_shearch"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="@+id/ed_map_shearch" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </com.google.android.material.card.MaterialCardView>
 
 

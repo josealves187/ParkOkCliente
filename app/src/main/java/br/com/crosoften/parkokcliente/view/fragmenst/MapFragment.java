@@ -2,13 +2,18 @@ package br.com.crosoften.parkokcliente.view.fragmenst;
 
 
 import android.Manifest;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +40,9 @@ import br.com.crosoften.parkokcliente.view.adapters.ParkingDetailsPaymentAdapter
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickListener, OnMapReadyCallback {
+public class MapFragment extends Fragment
+        implements GoogleMap.OnMarkerClickListener,
+        OnMapReadyCallback{
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private static final LatLng PERTH = new LatLng(-18.930337, -48.253140);
@@ -49,6 +56,7 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
     private Marker mSydney;
     private Marker mBrisbane;
     private TextView tvSeeDetail;
+    private  EditText edMapSearch;
 
     public MapFragment() {
         // Required empty public constructor
@@ -60,11 +68,17 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-        getActivity().setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
         tvSeeDetail = view.findViewById(R.id.tv_see_detail);
         mapView = view.findViewById(R.id.map);
         eventoButton();
+
+        edMapSearch = view.findViewById(R.id.ed_map_shearch);
+        edMapSearch.setInputType(0);
+        edMapSearch.setInputType(1);
+
         mapView.onCreate(savedInstanceState);
         mapView.onResume();
         mapView.getMapAsync(this);//when you already implement OnMapReadyCallback in your fragment_map
@@ -74,8 +88,10 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
 
     @Override
     public void onMapReady(GoogleMap Map) {
-
+        
         mMap = Map;
+        mMap.setMyLocationEnabled(true);
+
 
         /**Adicione alguns marcadores ao mapa e adicione um objeto de dados a cada marcador.
          */
@@ -98,6 +114,7 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
 
         // Defina um ouvinte para o clique do marcador.
         mMap.setOnMarkerClickListener(this);
+
 
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         // o método include calculará os limites mínimo e máximo da posição
@@ -131,7 +148,6 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
 
         // Recupera os dados do marcador.
         Integer clickCount = (Integer) marker.getTag();
-
 
         // Verifique se uma contagem de cliques foi definida e exiba a contagem de cliques.
         if (clickCount != null) {
@@ -181,6 +197,7 @@ public class MapFragment extends Fragment implements GoogleMap.OnMarkerClickList
         }
     }
 
+    //camada Meu local e o botão Meu local para mostrar ao usuário sua posição atual no mapa
     private void enableMyLocation() {
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {

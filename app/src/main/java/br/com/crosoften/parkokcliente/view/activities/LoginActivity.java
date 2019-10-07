@@ -57,7 +57,10 @@ public class LoginActivity extends AppCompatActivity {
         bnt_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkUserName();
+                //checkUserName();
+
+                Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(i);
 
             }
 
@@ -76,12 +79,13 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
         editor.putInt("SCREEN_ORIGEN", 1);
         editor.commit();
-        super.onBackPressed();
+
     }
 
     private void calledScreen() {
         Intent i = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(i);
+        super.onBackPressed();
     }
 
     private void checkUserName() {

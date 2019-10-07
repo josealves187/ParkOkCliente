@@ -29,14 +29,17 @@ public class ParkingDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking_details);
         initializeComponents();
+        eventButton();
 
         List<String> payment = new ArrayList<>();
-        payment.add(new String("Dinheiro"));
-        payment.add(new String("Cartão de crédito e débito"));
-        payment.add(new String("Pelo app"));
+        payment.add(("Dinheiro"));
+        payment.add(("Cartão de crédito e débito"));
+        payment.add(("Pelo app"));
         rcvPayment.setLayoutManager(new LinearLayoutManager(this));
         rcvPayment.setAdapter(new ParkingDetailsPaymentAdapter(payment,this));
+    }
 
+    private void eventButton() {
         mtToolbarParkingDetails.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

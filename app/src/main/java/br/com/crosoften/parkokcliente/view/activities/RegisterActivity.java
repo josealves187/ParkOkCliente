@@ -27,14 +27,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     private CheckBox cbTermsOfUse;
     private CheckBox cbPrivacyPpolicies;
-    private MaterialButton CADASTRAR;
+    private MaterialButton mbregister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        CADASTRAR= findViewById(R.id.btn_send);
+        mbregister= findViewById(R.id.btn_send);
         cbTermsOfUse = findViewById(R.id.ch_terms_of_use);
         cbPrivacyPpolicies = findViewById(R.id.cb_privacy_policies);
         //ADD Toobar
@@ -43,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        CADASTRAR.setOnClickListener(new View.OnClickListener() {
+        mbregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(RegisterActivity.this, ConfirmationCodeActivity.class);
@@ -83,6 +83,10 @@ public class RegisterActivity extends AppCompatActivity {
          * underlined text e  placed color com SpannableString
          * colocando cor e sublinhado o texto usando  SpannableString
          * */
+        ss.setSpan(span1, 16, 28, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sss.setSpan(span2, 15, 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
 
         ss.setSpan(new ForegroundColorSpan(Color.BLACK), 0, 28, 0);
         sss.setSpan(new ForegroundColorSpan(Color.BLACK), 0, 39, 0);
@@ -106,7 +110,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         cbPrivacyPpolicies.setText(sss);
         cbPrivacyPpolicies.setMovementMethod(LinkMovementMethod.getInstance());
-
     }
 
 }
