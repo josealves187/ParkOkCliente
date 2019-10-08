@@ -1,9 +1,11 @@
 package br.com.crosoften.parkokcliente.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
@@ -23,6 +25,9 @@ public class MyCardsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_cards);
+        initializeComponents();
+        onBackPressed();
+
 
         rcvPaymentCards = findViewById(R.id.rcv_payment_cards);
 
@@ -37,5 +42,20 @@ public class MyCardsActivity extends AppCompatActivity {
         rcvPaymentCards.setAdapter(new MyCardsAdapter(myCards,this));
 
 
+    }
+
+    private void initializeComponents() {
+        //ADD Toobar
+        Toolbar toolbar = findViewById(R.id.mt_toolbar_my_cards);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public void onBackPressed() {
+        SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
+        editor.putInt("SCREEN_ORIGEN", 1);
+        editor.commit();
+        super.onBackPressed();
     }
 }

@@ -19,10 +19,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+
 
             <ImageView
                 android:id="@+id/iv_qr_code_input"
@@ -118,7 +124,6 @@
                 app:titleTextAppearance="@style/MaterialToolbarMenuStyleThemescreens" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

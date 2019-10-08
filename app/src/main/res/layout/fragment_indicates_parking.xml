@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragmenst.IndicatesParkingFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/aciv_photo_user_detais"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_card_parking"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/btn_title_tell_your_friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="26dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="@string/tv_tell_your_parking"
+                    android:textColor="@color/colorNameTextView"
+                    app:layout_constraintEnd_toEndOf="@+id/aciv_photo_user_detais"
+                    app:layout_constraintStart_toStartOf="@+id/aciv_photo_user_detais"
+                    app:layout_constraintTop_toBottomOf="@+id/aciv_photo_user_detais" />
+
+                <TextView
+                    android:id="@+id/btn_title_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="@string/tv_just_share_parking"
+                    android:textColor="@color/colorNameTextView"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_title_tell_your_friends"
+                    app:layout_constraintStart_toStartOf="@+id/btn_title_tell_your_friends"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_title_tell_your_friends" />
+
+                <TextView
+                    android:id="@+id/tv_title_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="26dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="@string/tv_link_parking"
+                    android:textColor="@color/colorTextView"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_title_msg" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_share"
+                    style="@style/MaterialBottonStyleTheme"
+                    android:layout_width="200dp"
+                    android:layout_height="0dp"
+                    android:text="@string/tv_tell_codigo_friends"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title_code"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title_code"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_code" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

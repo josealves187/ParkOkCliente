@@ -1,12 +1,12 @@
 package br.com.crosoften.parkokcliente.view.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     private BottomNavigationView mbnvMenu;
     private ViewPager mVpContent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
         initComponents();
         mbnvMenu.setOnNavigationItemSelectedListener(this);
-
         initViewPager();
     }
 
@@ -35,31 +35,31 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-       switch (menuItem.getItemId()){
-           case R.id.nav_qrcode:
-               mVpContent.setCurrentItem(0, false);
-               return true;
+        switch (menuItem.getItemId()) {
+            case R.id.nav_qrcode:
+                mVpContent.setCurrentItem(0, false);
+                return true;
 
-               case R.id.nav_map:
-               mVpContent.setCurrentItem(1, false);
-               return true;
+            case R.id.nav_map:
+                mVpContent.setCurrentItem(1, false);
+                return true;
 
-               case R.id.nav_historic:
-               mVpContent.setCurrentItem(2, false);
-               return true;
+            case R.id.nav_historic:
+                mVpContent.setCurrentItem(2, false);
+                return true;
 
-               case R.id.nav_friend:
-               mVpContent.setCurrentItem(3, false);
-               return true;
-       }
-       return false;
+            case R.id.nav_friend:
+                mVpContent.setCurrentItem(3, false);
+                return true;
+        }
+        return false;
 
 
     }
 
     private void initViewPager() {
         mVpContent.setAdapter(new HomeViewPagerAdapter(getSupportFragmentManager()));
-        mVpContent.setCurrentItem(0,false);
+        mVpContent.setCurrentItem(0, false);
     }
 
     @Override
@@ -67,25 +67,53 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         super.onResume();
 
         SharedPreferences preferences = getSharedPreferences("PARKOK", MODE_PRIVATE);
-        int screenOrigin = preferences.getInt("SCREEN_ORIGEN",0);
+        int screenOrigin = preferences.getInt("SCREEN_ORIGEN", 0);
 
-        switch (screenOrigin ){
-            case 1 :
-                mVpContent.setCurrentItem(0,false);
+        switch (screenOrigin) {
+            case 1:
+                mVpContent.setCurrentItem(0, false);
                 break;
 
             case 2:
-                mVpContent.setCurrentItem(1,false);
+                mVpContent.setCurrentItem(1, false);
                 break;
 
             case 3:
-                mVpContent.setCurrentItem(2,false);
+                mVpContent.setCurrentItem(2, false);
                 break;
 
             case 4:
-                mVpContent.setCurrentItem(3,false);
+                mVpContent.setCurrentItem(3, false);
+                break;
+
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        SharedPreferences preferences = getSharedPreferences("PARKOK", MODE_PRIVATE);
+        int screenOrigin = preferences.getInt("SCREEN_ORIGEN", 0);
+
+        switch (screenOrigin) {
+            case 1:
+                mVpContent.setCurrentItem(0, false);
+                break;
+
+            case 2:
+                mVpContent.setCurrentItem(1, false);
+                break;
+
+            case 3:
+                mVpContent.setCurrentItem(2, false);
+                break;
+
+            case 4:
+                mVpContent.setCurrentItem(3, false);
                 break;
 
         }
     }
 }
+
+

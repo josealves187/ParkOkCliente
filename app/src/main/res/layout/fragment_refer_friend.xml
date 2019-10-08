@@ -18,132 +18,22 @@
         app:titleTextAppearance="@style/MaterialToolbarMenuStyleTheme"
         app:titleTextColor="@color/color_toolbar_menu" />
 
-    <androidx.core.widget.NestedScrollView
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_refer_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_refer_friends"/>
+
+
+    <br.com.crosoften.parkokcliente.view.custom.ViewPagerCustom
+        android:id="@+id/vp_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_refer_friends">
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/aciv_photo_user_detais"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_refer_friends"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/btn_title_tell_your_friends"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="68dp"
-        android:layout_marginRight="68dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:gravity="center"
-        android:text="@string/tv_tell_your_friends"
-        android:textColor="@color/colorNameTextView"
-        app:layout_constraintEnd_toEndOf="@+id/aciv_photo_user_detais"
-        app:layout_constraintStart_toStartOf="@+id/aciv_photo_user_detais"
-        app:layout_constraintTop_toBottomOf="@+id/aciv_photo_user_detais" />
-
-    <TextView
-        android:id="@+id/btn_title_msg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:gravity="center"
-        android:text="@string/Share_code_friends"
-        android:textColor="@color/colorNameTextView"
-        app:layout_constraintEnd_toEndOf="@+id/btn_title_tell_your_friends"
-        app:layout_constraintStart_toStartOf="@+id/btn_title_tell_your_friends"
-        app:layout_constraintTop_toBottomOf="@+id/btn_title_tell_your_friends" />
-
-    <TextView
-        android:id="@+id/btn_title_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/quicksand_bold"
-        android:gravity="center"
-        android:text="@string/btn_title_code"
-        android:textColor="@color/colorTextView"
-        android:textSize="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_title_msg" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_share"
-        style="@style/MaterialBottonStyleTheme"
-        android:layout_width="200dp"
-        android:layout_height="0dp"
-        android:text="@string/tv_tell_codigo_friends"
-        app:layout_constraintEnd_toEndOf="@+id/btn_title_code"
-        app:layout_constraintStart_toStartOf="@+id/btn_title_code"
-        app:layout_constraintTop_toBottomOf="@+id/btn_title_code" />
-
-    <View
-        android:id="@+id/v_usage_policies"
-        style="@style/MaterialViewStyleTheme"
-        android:background="#B9B9B9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_share" />
-
-
-    <TextView
-        style="@style/MaterialTexteViewTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/enter_friend_code"
-        app:layout_constraintBottom_toTopOf="@+id/tv_activate_code"
-        app:layout_constraintStart_toStartOf="@+id/tv_activate_code" />
-
-            <EditText
-                android:id="@+id/tv_activate_code"
-                style="@style/MaterialTextViewTheme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginRight="26dp"
-                android:padding="12dp"
-                android:textAllCaps="true"
-                android:inputType="textCapCharacters"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/v_usage_policies" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_activate_code"
-                style="@style/MaterialButtonTheme"
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:text="@string/activate_code"
-                android:layout_marginBottom="26dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tv_activate_code"
-                app:layout_constraintStart_toStartOf="@+id/tv_activate_code"
-                app:layout_constraintTop_toBottomOf="@+id/tv_activate_code" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/tl_refer_friend" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

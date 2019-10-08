@@ -54,7 +54,8 @@
 
 
     <string name="amount_numero">Final %s</string>
-    <string name="tv_tell_your_friends">Indique aos seus amigos e ganhe 10 minutos de bônus</string>
+
+
 
 
     <!-- tela  temos de uso-->
@@ -126,6 +127,12 @@
     <string name="tv_tell_codigo_friends">COMPARTILHAR</string>
     <string name="enter_friend_code">Inserir código de um amigo</string>
     <string name="activate_code">ATIVAR CÓDIGO</string>
+    <string name="tv_tell_your_friends">Indique aos seus amigos e ganhe 10 minutos de bônus</string>
+
+
+    <string name="tv_tell_your_parking">Indique estacionamentos para utilizarem nossa plataforma!</string>
+    <string name="tv_link_parking">https://parkok.com.br</string>
+    <string name="tv_just_share_parking">É simples Basta compartilalhar o link abaixo e enviar aos seus estacionamentos  favoritos </string>
 
 
     <!-- adapter historic -->
@@ -138,6 +145,9 @@
     <string name="tltle_warning_post_qrcode">Você esta no</string>
     <string name="input_botton_qrcode">ENTRADA</string>
     <string name="confirmar_senh_register">Confirmar senha</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

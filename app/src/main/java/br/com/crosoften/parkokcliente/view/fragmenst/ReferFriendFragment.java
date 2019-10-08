@@ -1,29 +1,30 @@
 package br.com.crosoften.parkokcliente.view.fragmenst;
 
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.button.MaterialButton;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.tabs.TabLayout;
 
 import br.com.crosoften.parkokcliente.R;
-import br.com.crosoften.parkokcliente.view.activities.ChangeDataActivity;
+import br.com.crosoften.parkokcliente.view.adapters.ViewPagerAdapter;
+import br.com.crosoften.parkokcliente.view.custom.ViewPagerCustom;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ReferFriendFragment extends Fragment {
 
-    private MaterialButton btnActivateCode;
-    private TextView tvActivateCode;
+
+    private TabLayout tlReferFriend;
+    private ViewPagerCustom vpView;
+    private MaterialToolbar mt_toolbar_refer_friends;
 
     public ReferFriendFragment() {
         // Required empty public constructor
@@ -35,33 +36,48 @@ public class ReferFriendFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        getActivity().setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         View view = inflater.inflate(R.layout.fragment_refer_friend, container, false);
+        tlReferFriend = view.findViewById(R.id.tl_refer_friend);
+        vpView = view.findViewById(R.id.vp_view);
+        mt_toolbar_refer_friends = view.findViewById(R.id.mt_toolbar_refer_friends);
 
-        btnActivateCode = view.findViewById(R.id.btn_activate_code);
-        tvActivateCode = view.findViewById(R.id.tv_activate_code);
-        eventButton();
+
         return view;
     }
 
-    private void eventButton() {
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setupTabLayout();
 
 
-        btnActivateCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean validCredential = true;
-                if (tvActivateCode.getText().toString().equals("")) {
-                    tvActivateCode.setError("Entre com código");
-                    tvActivateCode.requestFocus();
-                }else if (validCredential){
-                    Toast.makeText(getActivity(), "Cógigo ativado", Toast.LENGTH_SHORT).show();
-
-                }
-
-            }
-        });
     }
+
+    /**
+     * Método responsável por seta o TabLayout com os fragments de Idicação de amigo e de estacionamento
+     */
+    private void setupTabLayout() {
+        tlReferFriend = getActivity().findViewById(R.id.tl_refer_friend);
+        vpView = getActivity().findViewById(R.id.vp_view);
+
+
+        tlReferFriend.addTab(tlReferFriend.newTab().setText("Indica amigo "));
+        tlReferFriend.addTab(tlReferFriend.newTab().setText("indica estacionamento"));
+        vpView.setOffscreenPageLimit(2);
+        vpView.setAdapter(new ViewPagerAdapter(getChildFragmentManager()));
+
+        tlReferFriend.addOnTabSelectedListener(
+                new TabLayout.ViewPagerOnTabSelectedListener(
+                        vpView
+                )
+        );
+
+        vpView.addOnPageChangeListener(
+                new TabLayout.TabLayoutOnPageChangeListener(
+                        tlReferFriend
+                )
+        );
+    }
+
+
 }

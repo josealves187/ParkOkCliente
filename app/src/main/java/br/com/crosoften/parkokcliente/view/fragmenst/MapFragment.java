@@ -90,7 +90,7 @@ public class MapFragment extends Fragment
     public void onMapReady(GoogleMap Map) {
         
         mMap = Map;
-        mMap.setMyLocationEnabled(true);
+
 
 
         /**Adicione alguns marcadores ao mapa e adicione um objeto de dados a cada marcador.
