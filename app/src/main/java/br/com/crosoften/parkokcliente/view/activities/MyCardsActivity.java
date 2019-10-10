@@ -26,13 +26,9 @@ public class MyCardsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_cards);
         initializeComponents();
-        onBackPressed();
 
-
-        rcvPaymentCards = findViewById(R.id.rcv_payment_cards);
 
         List<MyCards> myCards = new ArrayList<>();
-       // Glide.with(this).load("https://api.adorable.io/avatars/285/abott@adorable.png").into();
         myCards.add( new MyCards(1444,"Jose", new Date(), 6,1));
         myCards.add( new MyCards(5555,"Jose", new Date(), 6,2));
         myCards.add( new MyCards(5565,"Jose", new Date(), 6,3));
@@ -45,17 +41,13 @@ public class MyCardsActivity extends AppCompatActivity {
     }
 
     private void initializeComponents() {
+
+        rcvPaymentCards = findViewById(R.id.rcv_payment_cards);
         //ADD Toobar
         Toolbar toolbar = findViewById(R.id.mt_toolbar_my_cards);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    @Override
-    public void onBackPressed() {
-        SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
-        editor.putInt("SCREEN_ORIGEN", 1);
-        editor.commit();
-        super.onBackPressed();
-    }
+
 }

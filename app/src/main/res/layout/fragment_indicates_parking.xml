@@ -80,15 +80,32 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_title_msg" />
 
+
+                <TextView
+                    android:id="@+id/tv_copy"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/ic_copy_content"
+                    android:drawableLeft="@drawable/ic_copy_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="@string/tv_copy_link"
+                    android:textColor="@color/colorTextTextView"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title_code"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title_code"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_code" />
+
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_share"
                     style="@style/MaterialBottonStyleTheme"
                     android:layout_width="200dp"
                     android:layout_height="0dp"
                     android:text="@string/tv_tell_codigo_friends"
-                    app:layout_constraintEnd_toEndOf="@+id/tv_title_code"
-                    app:layout_constraintStart_toStartOf="@+id/tv_title_code"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_title_code" />
+                    app:layout_constraintEnd_toEndOf="@+id/tv_copy"
+                    app:layout_constraintStart_toStartOf="@+id/tv_copy"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_copy" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

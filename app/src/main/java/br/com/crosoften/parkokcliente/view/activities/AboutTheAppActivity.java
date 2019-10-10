@@ -35,7 +35,32 @@ public class AboutTheAppActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_the_app);
         //inicializar componente
         initializeComponent();
+        eventButton();
+        TextViewClickTrigger();
 
+    }
+
+    private void eventButton() {
+        /***
+         * redirected screen
+         * redirecionando telas Navigation da toolbar
+         * */
+        mtToolbarTermosUse.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
+                editor.putInt(SCREEN_ORIGEN, 4);
+                editor.commit();
+            }
+        });
+    }
+
+    /***
+     * acionar click do textview e direcionado os layout
+     *  colocando cor e sublinhado o texto usando  SpannableString
+     * */
+    private void TextViewClickTrigger() {
         /***
          * acionar click do textview e direcionado os layout
          * */
@@ -62,19 +87,7 @@ public class AboutTheAppActivity extends AppCompatActivity {
             }
         };
 
-        /***
-         * redirected screen
-         * redirecionando telas Navigation da toolbar
-         * */
-        mtToolbarTermosUse.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-                SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
-                editor.putInt(SCREEN_ORIGEN, 4);
-                editor.commit();
-            }
-        });
+
 
         /***
          *
@@ -101,7 +114,6 @@ public class AboutTheAppActivity extends AppCompatActivity {
 
         tvTemos.setText(ss);
         tvTemos.setMovementMethod(LinkMovementMethod.getInstance());
-
     }
 
     private void initializeComponent() {

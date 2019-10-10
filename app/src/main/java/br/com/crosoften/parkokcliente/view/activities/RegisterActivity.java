@@ -33,24 +33,13 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        initializecomponents();
+        eventButton();
+        TextViewClickTrigger();
 
-        mbregister= findViewById(R.id.btn_send);
-        cbTermsOfUse = findViewById(R.id.ch_terms_of_use);
-        cbPrivacyPpolicies = findViewById(R.id.cb_privacy_policies);
-        //ADD Toobar
-        Toolbar toolbar = findViewById(R.id.mt_toolbar_recover_password);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 
-
-        mbregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(RegisterActivity.this, ConfirmationCodeActivity.class);
-                startActivity(i);
-            }
-        });
-
+    private void TextViewClickTrigger() {
         /***
          * acionar click do textview e direcionado os layout
          * */
@@ -87,7 +76,6 @@ public class RegisterActivity extends AppCompatActivity {
         sss.setSpan(span2, 15, 39, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
 
-
         ss.setSpan(new ForegroundColorSpan(Color.BLACK), 0, 28, 0);
         sss.setSpan(new ForegroundColorSpan(Color.BLACK), 0, 39, 0);
         // bold
@@ -110,6 +98,27 @@ public class RegisterActivity extends AppCompatActivity {
 
         cbPrivacyPpolicies.setText(sss);
         cbPrivacyPpolicies.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    private void eventButton() {
+        mbregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(RegisterActivity.this, ConfirmationCodeActivity.class);
+                startActivity(i);
+            }
+        });
+
+    }
+
+    private void initializecomponents() {
+        mbregister= findViewById(R.id.btn_send);
+        cbTermsOfUse = findViewById(R.id.ch_terms_of_use);
+        cbPrivacyPpolicies = findViewById(R.id.cb_privacy_policies);
+        //ADD Toobar
+        Toolbar toolbar = findViewById(R.id.mt_toolbar_recover_password);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 }

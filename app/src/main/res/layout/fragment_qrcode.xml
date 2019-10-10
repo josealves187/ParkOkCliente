@@ -25,7 +25,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/iv_qr_code_input"
@@ -33,7 +33,7 @@
                 android:layout_height="210dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_saldo" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_time" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/aciv_calculator_qrcode"
@@ -43,11 +43,11 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_saldo_2"
-                app:layout_constraintTop_toTopOf="@+id/tv_saldo_2" />
+                app:layout_constraintBottom_toBottomOf="@+id/tv_you_saved"
+                app:layout_constraintTop_toTopOf="@+id/tv_you_saved" />
 
             <TextView
-                android:id="@+id/tv_saldo_2"
+                android:id="@+id/tv_you_saved"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -68,12 +68,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_time_clock"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_relo"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_bonus_minutes"
                 app:layout_constraintStart_toStartOf="@+id/aciv_calculator_qrcode"
-                app:layout_constraintTop_toTopOf="@+id/tv_relo" />
+                app:layout_constraintTop_toTopOf="@+id/tv_bonus_minutes" />
 
             <TextView
-                android:id="@+id/tv_relo"
+                android:id="@+id/tv_bonus_minutes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -83,12 +83,12 @@
                 android:textColor="#616161"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tv_saldo_2"
+                app:layout_constraintEnd_toEndOf="@+id/tv_you_saved"
                 app:layout_constraintStart_toEndOf="@+id/aciv_time_bonus"
-                app:layout_constraintTop_toBottomOf="@+id/tv_saldo_2" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_you_saved" />
 
             <TextView
-                android:id="@+id/tv_saldo"
+                android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -140,47 +140,47 @@
                         android:fontFamily="@font/quicksand_bold"
                         android:text="@string/tv_title_client_check_qrcode"
                         android:textColor="@color/colorTextView"
-                        android:textSize="10dp"
+                        android:textSize="12sp"
                         android:textStyle="bold"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/aciv_entrs"
-                        app:layout_constraintStart_toEndOf="@+id/tv_hello_profile"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_hello_profile"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:text="Olá,"
-                        android:textColor="#111"
-                        android:textSize="18sp"
+                        android:textColor="@color/colorTextTextView"
+                        android:textSize="16sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/aciv_discount_benefit"
-                        app:layout_constraintStart_toEndOf="@+id/aciv_discount_benefit"
-                        app:layout_constraintTop_toTopOf="@+id/aciv_discount_benefit" />
+                        android:inputType="textCapWords"
+                        app:layout_constraintBottom_toBottomOf="@+id/aciv_photo_profile"
+                        app:layout_constraintStart_toEndOf="@+id/aciv_photo_profile"
+                        app:layout_constraintTop_toTopOf="@+id/aciv_photo_profile" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/aciv_entrs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="26dp"
                         android:layout_marginEnd="26dp"
                         android:src="@drawable/ic_arrow_indication"
-                        app:layout_constraintBottom_toBottomOf="@+id/tv_title_client_check"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/tv_title_client_check" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/aciv_discount_benefit"
+                        android:id="@+id/aciv_photo_profile"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="26dp"
+                        android:layout_marginStart="18dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="26dp"
+                        android:layout_marginEnd="18dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ic_profile_picture"
                         app:layout_constraintBottom_toBottomOf="parent"

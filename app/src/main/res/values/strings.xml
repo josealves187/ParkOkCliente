@@ -56,6 +56,10 @@
     <string name="amount_numero">Final %s</string>
 
 
+    <string name="helo_qrcode">Olá, %s</string>
+
+
+
 
 
     <!-- tela  temos de uso-->
@@ -122,7 +126,7 @@
 
 
     <!--  tela refer friends -->
-    <string name="btn_title_code">A X 5 C 7 8</string>
+    <string name="tv_title_code">A X 5 C 7 8</string>
     <string name="Share_code_friends">Compartilhe seu código com seus amigos e após utilizarem na primeira estadia você ganhará 10 minutos pela indicação!</string>
     <string name="tv_tell_codigo_friends">COMPARTILHAR</string>
     <string name="enter_friend_code">Inserir código de um amigo</string>
@@ -132,6 +136,7 @@
 
     <string name="tv_tell_your_parking">Indique estacionamentos para utilizarem nossa plataforma!</string>
     <string name="tv_link_parking">https://parkok.com.br</string>
+    <string name="tv_copy_link">Copiar link</string>
     <string name="tv_just_share_parking">É simples Basta compartilalhar o link abaixo e enviar aos seus estacionamentos  favoritos </string>
 
 
@@ -144,10 +149,42 @@
     <!-- tela QRCode Post Reading Activity -->
     <string name="tltle_warning_post_qrcode">Você esta no</string>
     <string name="input_botton_qrcode">ENTRADA</string>
-    <string name="confirmar_senh_register">Confirmar senha</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- titulos dos TextView da tela de perfil -->
+    <string name="tv_title_profile_Registration_data">Dados cadastrais</string>
+    <string name="tv_title_profile_my_cards">Meus cartões</string>
+    <string name="tv_title_profile_contact_us">Fale conosco</string>
+    <string name="tv_title_profile_about">Sobre o app</string>
+    <string name="tv_title_profile_use_terms">Termos de uso</string>
+    <string name="tv_title_profile_privacy">Políticas de privacidade</string>
+    <string name="tv_title_profile_exit">Sair</string>
+    <string name="tv_title_profile_ola">Olá,</string>
+
+    <!-- titulos dos TextView da tela de QRCodePostReadingActivity -->
+    <string name="tv_title_boad_post_qrcode">PLACA</string>
+    <string name="tv_tiltle_hour_opening_hours">Horário de funcionamento hoje:</string>
+
+    <string name="tv_post_qrcode">-</string>
+    <string name="tv_title_balance_available_post_qrcode">SALDO DISPONÍVEL</string>
+    <string name="tv_title_exit_post_qrcode">QR CODE PARA SAÍDA</string>
+
+    <!-- titulos abas indica amigo -->
+    <string name="refer_friend">Indica amigo</string>
+    <string name="referpack">indica estacionamento</string>
+
+    <!-- titulos CardView Tela fragment map -->
+    <string name="tv_see_detail_fragment_map">VER DETALHES</string>
+    <string name="tv_share_fragment_map">Compartilhar</string>
+
+    <!--  Cadastro (Dados de acesso) -->
+    <string name="tv_titleaccept_teemsof_use">Li e aceito os TERMOS DE USO</string>
+    <string name="tv_title_PRIVACY_POLICIES">Li e aceito as POLÍTICAS DE PRIVACIDADE</string>
+    <string name="tv_title_button_name">Nome completo</string>
+    <string name="tv_title_cpf">CPF</string>
+    <string name="tv_title_email">E-mail</string>
+    <string name="confirmar_senh_register">Confirmar senha</string>
 
 
 </resources>

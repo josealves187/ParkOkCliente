@@ -46,7 +46,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/quicksand_light"
                 android:text="Rua Machado de Assis, 550 - Martins Uberlândia - MG"
-                android:textColor="#616161"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mt_toolbar_post_qrcode" />
@@ -58,7 +58,7 @@
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:text="(34) 3210 - 7654"
-                android:textColor="#616161"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_saldo"
                 app:layout_constraintStart_toStartOf="@+id/tv_tlitle_saldo"
                 app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_saldo" />
@@ -81,7 +81,7 @@
                 android:fontFamily="@font/quicksand_light"
                 android:gravity="center"
                 android:text="@string/tltle_warning_post_qrcode"
-                android:textColor="#616161"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintEnd_toEndOf="@+id/aciv_discount_benefit"
                 app:layout_constraintStart_toStartOf="@+id/aciv_discount_benefit"
                 app:layout_constraintTop_toBottomOf="@+id/aciv_discount_benefit" />
@@ -95,51 +95,81 @@
                 android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:text="ESTACIONAMENTO AUTO PARK"
-                android:textColor="#F54800"
+                android:textColor="@color/colorTextView"
                 app:layout_constraintEnd_toEndOf="@+id/tv_tlitle"
                 app:layout_constraintStart_toStartOf="@+id/tv_tlitle"
                 app:layout_constraintTop_toBottomOf="@+id/tv_tlitle" />
 
             <TextView
-                android:id="@+id/tv_tlitle_hora"
+                android:id="@+id/tv_tlitle_hour"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
                 android:fontFamily="@font/quicksand_light"
                 android:gravity="center"
-                android:text="Horário de funcionamento hoje:"
-                android:textColor="#616161"
+                android:text="@string/tv_tiltle_hour_opening_hours"
+                android:textColor="@color/colorNameTextView"
                 app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_local"
                 app:layout_constraintStart_toStartOf="@+id/tv_tlitle_local"
                 app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_local" />
 
-            <TextView
-                android:id="@+id/tv_tlitle_hora_k"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="07:30 - 18:00"
-                android:textColor="#616161"
-                app:layout_constraintEnd_toEndOf="@+id/tv_tlitle_hora"
-                app:layout_constraintStart_toStartOf="@+id/tv_tlitle_hora"
-                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_hora" />
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_hour">
+
+
+                <TextView
+                android:id="@+id/tv_tlitle_hour_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/colorNameTextView"
+                android:gravity="center"
+                android:text="07:30 " />
+
+                <TextView
+                    android:id="@+id/tvtlitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/colorNameTextView"
+                    android:gravity="center"
+                    android:text="@string/tv_post_qrcode" />
+
+                <TextView
+                    android:id="@+id/tv_tlitle_hour_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorNameTextView"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="07:30" />
+
+
+            </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cm_intput"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="28dp"
                 android:layout_marginRight="30dp"
+                android:layout_marginTop="18dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                 app:strokeColor="@color/colorStrokeCardView"
-                app:layout_constraintTop_toBottomOf="@+id/tv_tlitle_hora_k"
                 app:strokeWidth="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -169,7 +199,7 @@
                         android:layout_marginRight="1dp"
                         android:fontFamily="@font/quicksand_bold"
                         android:gravity="center"
-                        android:text="10:36 - 08/08/19"
+                        tools:text="10:36 - 08/08/19"
                         android:textColor="@color/colorNameTextView"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_title_input"
@@ -206,10 +236,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/quicksand_light"
                         android:gravity="center"
-                        android:text="PLACA"
+                        android:text="@string/tv_title_boad_post_qrcode"
                         android:textColor="@color/colorNameTextView"
                         android:textStyle="bold"
                         android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -222,7 +253,8 @@
                         android:layout_marginRight="1dp"
                         android:fontFamily="@font/quicksand_bold"
                         android:gravity="center"
-                        android:text="ABC-1234"
+                        tools:text="ABC-1234"
+                        android:textAllCaps="true"
                         android:textColor="@color/colorNameTextView"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_title_boad"
@@ -258,10 +290,11 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/quicksand_light"
                         android:gravity="center"
-                        android:text="SALDO DISPONÍVEL"
+                        android:text="@string/tv_title_balance_available_post_qrcode"
                         android:textColor="@color/colorNameTextView"
                         android:textStyle="bold"
                         android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -295,7 +328,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cm_balande_available"
-                android:backgroundTint="#707070"
+                android:backgroundTint="@color/colorCardViewPostQrcode"
                 app:strokeWidth="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -307,8 +340,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/quicksand_bold"
-                        android:text="QR CODE PARA SAÍDA"
-                        android:textColor="#ffff"
+                        android:text="@string/tv_title_exit_post_qrcode"
+                        android:textColor="@android:color/white"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/aciv_car_type"
                         app:layout_constraintEnd_toEndOf="parent"

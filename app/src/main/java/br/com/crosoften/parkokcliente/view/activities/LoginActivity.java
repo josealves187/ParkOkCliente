@@ -57,11 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         bnt_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //checkUserName();
-
-                Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(i);
-
+                checkUserName();
             }
 
         });
@@ -77,15 +73,18 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
-        editor.putInt("SCREEN_ORIGEN", 1);
+        editor.putInt("SCREEN_ORIGEN", 0);
         editor.commit();
 
     }
 
     private void calledScreen() {
+
         Intent i = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(i);
-        super.onBackPressed();
+        SharedPreferences.Editor editor = getSharedPreferences("PARKOK", MODE_PRIVATE).edit();
+        editor.putInt("SCREEN_ORIGEN", 0);
+        editor.commit();
     }
 
     private void checkUserName() {
@@ -137,6 +136,7 @@ public class LoginActivity extends AppCompatActivity {
             if (validCredential) {
                 //everything checked we open new activity
                 calledScreen();
+
 
                 Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
                 //we close this activity

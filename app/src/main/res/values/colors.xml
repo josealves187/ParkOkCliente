@@ -46,4 +46,9 @@
 
     <!-- Customizando  tela login -->
     <color name="colorBorderBox">#F54800</color>
+
+    <!-- Customizando cardView tela qrcode post -->
+    <color name="colorCardViewPostQrcode">#707070</color>
+
+
 </resources>

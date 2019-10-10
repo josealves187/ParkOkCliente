@@ -12,7 +12,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".view.activities.MyCardsActivity"
-            android:parentActivityName=".view.activities.ProfileActivity"/>
+            android:parentActivityName=".view.activities.ProfileActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".view.activities.ParkingDetailsActivity" />
         <activity
             android:name=".view.activities.QRCodeUser.QRCodeExitActivity"
@@ -26,8 +28,10 @@
             android:name=".view.activities.ContactActivity"
             android:parentActivityName=".view.activities.ProfileActivity"
             android:screenOrientation="portrait"/>
+
         <activity android:name=".view.activities.ProfileActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.ChangeDataActivity"
             android:parentActivityName=".view.activities.RegistrationDataActivity"
@@ -36,35 +40,44 @@
             android:name=".view.activities.RegistrationDataActivity"
             android:parentActivityName=".view.activities.ProfileActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.AboutTheAppActivity"
             android:parentActivityName=".view.activities.ProfileActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.QRCodeUser.QRCodePostReadingActivity"
             android:parentActivityName=".view.activities.HomeActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.HomeActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".view.activities.ConfirmationCodeActivity"
             android:parentActivityName=".view.activities.RegisterActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.ThesesUsePrivacyActivity"
             android:parentActivityName=".view.activities.RegisterActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.RegisterActivity"
             android:parentActivityName=".view.activities.LoginActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.RecoverPasswordActivity"
             android:parentActivityName=".view.activities.LoginActivity"
             android:screenOrientation="portrait" />
+
         <activity android:name=".view.activities.LoginActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".view.activities.SplashScreenActivity"
             android:screenOrientation="portrait">

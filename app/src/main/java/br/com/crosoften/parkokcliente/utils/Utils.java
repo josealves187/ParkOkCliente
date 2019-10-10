@@ -40,45 +40,40 @@ public abstract class Utils {
      * */
 
 
-//    public static String timeFormat(Date date, Context context) {
+    @SuppressLint("SimpleDateFormat")
+    public static String dateFormat( Date date){
+
+        long data = System.currentTimeMillis();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm '-' yyyy/MM/dd");
+        String dataString = simpleDateFormat.format(data);
+        return dataString;
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    public static String timeFormat( Date date){
+
+        long data = System.currentTimeMillis();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm");
+        String dataString = simpleDateFormat.format(data);
+        return dataString;
+    }
+
+//    @SuppressLint("SimpleDateFormat")
+//    public static String timeFormat( Date date,Context context){
+//
 //        String formatDate = "HH:mm";
-//        SimpleDateFormat simpleDateFormat;
-//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-//            simpleDateFormat = new SimpleDateFormat(formatDate,
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            new SimpleDateFormat(formatDate,
 //                    (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) ?
 //                            context.getResources().getConfiguration().getLocales().get(0)
 //                            : context.getResources().getConfiguration().locale);
-//        } else
-//            simpleDateFormat = new SimpleDateFormat(formatDate);
-//        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-//        return simpleDateFormat.format(date).toUpperCase();
-//    }
-    @SuppressLint("SimpleDateFormat")
-    public static String timeFormat( Date date,Context context){
-
-        String formatDate = "HH:mm";
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            new SimpleDateFormat(formatDate,
-                    (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) ?
-                            context.getResources().getConfiguration().getLocales().get(0)
-                            : context.getResources().getConfiguration().locale);
-            OffsetTime offset = OffsetTime.now();
-            return (offset.getHour() + " : " + offset.getMinute()
-            );
-        }
-
-        return "";
-    }
-
-//    private static String zeroOffLeft(){
+//            OffsetTime offset = OffsetTime.now();
+//            return (offset.getHour() + " : " + offset.getMinute()
+//            );
+//        }
 //
-//
+//        return "";
 //    }
-    private static Calendar dateToCalendar(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
-        return calendar;
-    }
 
 
     /**

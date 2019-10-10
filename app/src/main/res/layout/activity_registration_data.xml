@@ -38,41 +38,47 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/btn_registe"
+                android:id="@+id/tv_cpf_register"
                 style="@style/MaterialEditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginRight="26dp"
+                android:textColor="@color/colorTextTextView"
+                android:fontFamily="@font/quicksand_regular"
                 android:padding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_register"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_register"
                 tools:layout_editor_absoluteY="352dp" />
 
             <TextView
-                android:id="@+id/btn_regist"
+                android:id="@+id/tv_email_register_data"
                 style="@style/MaterialEditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginRight="26dp"
+                android:textColor="@color/colorTextTextView"
+                android:fontFamily="@font/quicksand_regular"
                 android:padding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_registe"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cpf_register"
                 tools:layout_editor_absoluteY="352dp" />
 
             <TextView
-                android:id="@+id/btn_register"
+                android:id="@+id/tv_name_register"
                 style="@style/MaterialEditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
                 android:layout_marginTop="70dp"
                 android:layout_marginRight="26dp"
+                android:textColor="@color/colorTextTextView"
+                android:fontFamily="@font/quicksand_regular"
                 android:padding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,8 +91,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/tv_title_change_email"
-                app:layout_constraintBottom_toTopOf="@+id/btn_regist"
-                app:layout_constraintStart_toStartOf="@+id/btn_regist" />
+                app:layout_constraintBottom_toTopOf="@+id/tv_email_register_data"
+                app:layout_constraintStart_toStartOf="@+id/tv_email_register_data" />
 
             <TextView
                 style="@style/MaterialTexteViewTheme"
@@ -95,8 +101,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/tv_title_change_cpf"
-                app:layout_constraintBottom_toTopOf="@+id/btn_registe"
-                app:layout_constraintStart_toStartOf="@+id/btn_registe" />
+                app:layout_constraintBottom_toTopOf="@+id/tv_cpf_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_cpf_register" />
 
             <TextView
                 style="@style/MaterialTexteViewTheme"
@@ -104,8 +110,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/tv_title_change_name"
-                app:layout_constraintBottom_toTopOf="@+id/btn_register"
-                app:layout_constraintStart_toStartOf="@+id/btn_register" />
+                app:layout_constraintBottom_toTopOf="@+id/tv_name_register"
+                app:layout_constraintStart_toStartOf="@+id/tv_name_register" />
 
 
 
@@ -122,7 +128,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_regist"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_register_data"
                 app:layout_constraintVertical_bias="1.0" />
 
             <de.hdodenhof.circleimageview.CircleImageView

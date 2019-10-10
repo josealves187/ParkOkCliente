@@ -24,13 +24,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/tv_registration_dat"
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
-                android:text="Dados cadastrais"
+                android:text="@string/tv_title_profile_Registration_data"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_profile"
                 app:layout_constraintStart_toEndOf="@+id/aciv_profile"
                 app:layout_constraintTop_toTopOf="@+id/aciv_profile" />
@@ -41,16 +41,28 @@
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
                 android:layout_marginLeft="19dp"
-                android:text="Meus cartões"
+                android:text="@string/tv_title_profile_my_cards"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_tutorial_and_faq_profile"
                 app:layout_constraintStart_toEndOf="@+id/aciv_tutorial_and_faq_profile"
                 app:layout_constraintTop_toTopOf="@+id/aciv_tutorial_and_faq_profile" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/aciv_tutorial_and_faq_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_my_cards"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_menu_profile" />
+
 
             <TextView
                 android:id="@+id/tv_title_contact_us"
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
-                android:text="Fale conosco"
+                android:text="@string/tv_title_profile_contact_us"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_calculator_qrcode"
                 app:layout_constraintStart_toEndOf="@+id/aciv_calculator_qrcode"
                 app:layout_constraintTop_toTopOf="@+id/aciv_calculator_qrcode" />
@@ -59,7 +71,7 @@
                 android:id="@+id/tv_title_about_the_app"
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
-                android:text="Sobre o app"
+                android:text="@string/tv_title_profile_about"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_i_usage_policies_profile"
                 app:layout_constraintStart_toEndOf="@+id/aciv_i_usage_policies_profile"
                 app:layout_constraintTop_toTopOf="@+id/aciv_i_usage_policies_profile" />
@@ -68,7 +80,7 @@
                 android:id="@+id/tv_title_use_terms_profile"
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
-                android:text="Termos de uso"
+                android:text="@string/tv_title_profile_use_terms"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_i_privacy_terms_profile"
                 app:layout_constraintStart_toEndOf="@+id/aciv_i_privacy_terms_profile"
                 app:layout_constraintTop_toTopOf="@+id/aciv_i_privacy_terms_profile" />
@@ -78,7 +90,7 @@
                 android:id="@+id/tv_title_privacy_policies"
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
-                android:text="Políticas de privacidade"
+                android:text="@string/tv_title_profile_privacy"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_i_privacy_terms"
                 app:layout_constraintStart_toEndOf="@+id/aciv_i_privacy_terms"
                 app:layout_constraintTop_toTopOf="@+id/aciv_i_privacy_terms" />
@@ -88,7 +100,7 @@
                 style="@style/MaterialTexteViewTheme"
                 android:layout_width="340dp"
                 android:layout_marginLeft="20dp"
-                android:text="Sair"
+                android:text="@string/tv_title_profile_exit"
                 app:layout_constraintBottom_toBottomOf="@+id/aciv_i_exit_profile"
                 app:layout_constraintStart_toEndOf="@+id/aciv_i_exit_profile"
                 app:layout_constraintTop_toTopOf="@+id/aciv_i_exit_profile" />
@@ -175,19 +187,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_registration_dat" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/aciv_tutorial_and_faq_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="26dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_my_cards"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v_menu_profile" />
+
 
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="26dp"
@@ -308,36 +312,22 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_hello_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="26dp"
-                android:layout_marginLeft="26dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Olá,"
-                android:textColor="#111"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/civ_photo_profile"
-                app:layout_constraintStart_toEndOf="@+id/civ_photo_profile"
-                app:layout_constraintTop_toTopOf="@+id/civ_photo_profile" />
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tv_name_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_marginLeft="2dp"
-                android:fontFamily="@font/quicksand_light"
-                android:text="João Carlos"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/colorNameTextView"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_hello_profile"
-                app:layout_constraintStart_toEndOf="@+id/tv_hello_profile"
-                app:layout_constraintTop_toTopOf="@+id/tv_hello_profile" />
+                android:inputType="textCapWords"
+                app:layout_constraintBottom_toBottomOf="@+id/civ_photo_profile"
+                app:layout_constraintStart_toEndOf="@+id/civ_photo_profile"
+                app:layout_constraintTop_toTopOf="@+id/civ_photo_profile" />
+
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/civ_photo_profile"

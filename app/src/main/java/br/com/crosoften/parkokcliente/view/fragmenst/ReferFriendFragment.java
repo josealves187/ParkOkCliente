@@ -1,6 +1,7 @@
 package br.com.crosoften.parkokcliente.view.fragmenst;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import com.google.android.material.tabs.TabLayout;
 import br.com.crosoften.parkokcliente.R;
 import br.com.crosoften.parkokcliente.view.adapters.ViewPagerAdapter;
 import br.com.crosoften.parkokcliente.view.custom.ViewPagerCustom;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,19 +40,22 @@ public class ReferFriendFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_refer_friend, container, false);
-        tlReferFriend = view.findViewById(R.id.tl_refer_friend);
-        vpView = view.findViewById(R.id.vp_view);
-        mt_toolbar_refer_friends = view.findViewById(R.id.mt_toolbar_refer_friends);
+        initializeComponents(view);
 
 
         return view;
+    }
+
+    private void initializeComponents(View view) {
+        tlReferFriend = view.findViewById(R.id.tl_refer_friend);
+        vpView = view.findViewById(R.id.vp_view);
+        mt_toolbar_refer_friends = view.findViewById(R.id.mt_toolbar_refer_friends);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setupTabLayout();
-
 
     }
 
@@ -61,8 +67,8 @@ public class ReferFriendFragment extends Fragment {
         vpView = getActivity().findViewById(R.id.vp_view);
 
 
-        tlReferFriend.addTab(tlReferFriend.newTab().setText("Indica amigo "));
-        tlReferFriend.addTab(tlReferFriend.newTab().setText("indica estacionamento"));
+        tlReferFriend.addTab(tlReferFriend.newTab().setText(getString(R.string.refer_friend)));
+        tlReferFriend.addTab(tlReferFriend.newTab().setText(getString(R.string.referpack)));
         vpView.setOffscreenPageLimit(2);
         vpView.setAdapter(new ViewPagerAdapter(getChildFragmentManager()));
 
@@ -78,6 +84,5 @@ public class ReferFriendFragment extends Fragment {
                 )
         );
     }
-
 
 }

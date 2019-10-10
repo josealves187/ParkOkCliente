@@ -5,6 +5,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -37,6 +38,8 @@ import br.com.crosoften.parkokcliente.utils.PermitirLocalizacao;
 import br.com.crosoften.parkokcliente.view.activities.ParkingDetailsActivity;
 import br.com.crosoften.parkokcliente.view.adapters.ParkingDetailsPaymentAdapter;
 
+import static android.content.Context.MODE_PRIVATE;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -57,6 +60,8 @@ public class MapFragment extends Fragment
     private Marker mBrisbane;
     private TextView tvSeeDetail;
     private  EditText edMapSearch;
+    private  TextView tvShare;
+    private  TextView tvAddress;
 
     public MapFragment() {
         // Required empty public constructor
@@ -71,8 +76,7 @@ public class MapFragment extends Fragment
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
-        tvSeeDetail = view.findViewById(R.id.tv_see_detail);
-        mapView = view.findViewById(R.id.map);
+        initializeComponents(view);
         eventoButton();
 
         edMapSearch = view.findViewById(R.id.ed_map_shearch);
@@ -86,12 +90,17 @@ public class MapFragment extends Fragment
         return view;
     }
 
+    private void initializeComponents(View view) {
+        tvSeeDetail = view.findViewById(R.id.tv_see_detail);
+        mapView = view.findViewById(R.id.map);
+        tvShare = view.findViewById(R.id.tv_share);
+        tvAddress = view.findViewById(R.id.tv_address);
+    }
+
     @Override
     public void onMapReady(GoogleMap Map) {
         
         mMap = Map;
-
-
 
         /**Adicione alguns marcadores ao mapa e adicione um objeto de dados a cada marcador.
          */
@@ -142,6 +151,15 @@ public class MapFragment extends Fragment
                 startActivity(i);
             }
         });
+
+        tvShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String share = tvAddress.getText().toString();
+                shareText(share);
+
+            }
+        });
     }
     @Override
     public boolean onMarkerClick(final Marker marker) {
@@ -188,14 +206,6 @@ public class MapFragment extends Fragment
         }
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mPermissionDenied) {
-            showMissingPermissionError();
-            mPermissionDenied = false;
-        }
-    }
 
     //camada Meu local e o botão Meu local para mostrar ao usuário sua posição atual no mapa
     private void enableMyLocation() {
@@ -213,5 +223,25 @@ public class MapFragment extends Fragment
                 .newInstance(true).show(getFragmentManager(), "dialog");
     }
 
+    //metodo responsável para compartilhar código indicar amigos
+    private void shareText(String text) {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, text);
+        sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Contato pelo App");
+        sendIntent.setType("text/plain");
+        //sendIntent.setPackage("com.whatsapp");//apenas whatsapp
+        try {
+            Intent chooserIntent = Intent.createChooser(sendIntent, "Escolha App de compartilhamento");
+            if (chooserIntent == null) {
+                return;
+
+            }
+            startActivity(chooserIntent);
+        } catch (Exception e) {
+            startActivity(sendIntent);
+
+        }
+    }
 
 }

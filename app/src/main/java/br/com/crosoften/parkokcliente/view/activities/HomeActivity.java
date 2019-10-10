@@ -89,31 +89,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         }
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        SharedPreferences preferences = getSharedPreferences("PARKOK", MODE_PRIVATE);
-        int screenOrigin = preferences.getInt("SCREEN_ORIGEN", 0);
-
-        switch (screenOrigin) {
-            case 1:
-                mVpContent.setCurrentItem(0, false);
-                break;
-
-            case 2:
-                mVpContent.setCurrentItem(1, false);
-                break;
-
-            case 3:
-                mVpContent.setCurrentItem(2, false);
-                break;
-
-            case 4:
-                mVpContent.setCurrentItem(3, false);
-                break;
-
-        }
-    }
 }
 
 

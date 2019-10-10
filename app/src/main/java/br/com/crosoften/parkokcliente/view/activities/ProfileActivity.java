@@ -3,20 +3,27 @@ package br.com.crosoften.parkokcliente.view.activities;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 
 import br.com.crosoften.parkokcliente.R;
+import br.com.crosoften.parkokcliente.commom.Users;
 
 import static br.com.crosoften.parkokcliente.utils.Constants.TEXT_USE;
 import static br.com.crosoften.parkokcliente.utils.Constants.TITLE_TOOLBAR;
@@ -49,8 +56,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         initializeComponent();
         implementationInstance();
 
-
-
         mtToolbarProfile.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,8 +63,26 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
+
+        Users users = new Users(1, "José Alves", "14587965288", "jralves187@gmail.com");
+        if (users != null) {
+            Glide.with(this).load("https://firebasestorage.googleapis.com/v0/b/freedelivery-8ff6e.appspot.com/o/imagens%2FUsuario%2FyO40m4hU9dR2eoQLANMrSkkcIQP2jpeg?alt=media&token=30dffe08-64ba-4b08-acca-10c6f1ac7d0f").into(civPhotoProfile);
+            tvNameProfile.setText(users.getNameUser());
+
+
+            SpannableString(users);
+        }
+
     }
 
+    /***
+     * colocando cor no texto usando  SpannableString
+     * */
+    private void SpannableString(Users users) {
+        SpannableString ss = new SpannableString(getString(R.string.helo_qrcode,users.getNameUser()));
+        ss.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorNameTextView)), 0, 4, 0);
+        tvNameProfile.setText(ss);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,8 +119,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void implementationInstance() {
-        tvRegistrationDat.setOnClickListener(this);
         tvTitleMyCards.setOnClickListener(this);
+        tvRegistrationDat.setOnClickListener(this);
         tvTitleContact.setOnClickListener(this);
         tvTitleAboutTheApp.setOnClickListener(this);
         tvTitlePrivacyTermsProfile.setOnClickListener(this);
@@ -137,6 +160,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 flamePoliciesProfile(R.string.title_toolbar_terms_of_use, R.string.tv_text_terms_of_use);
                 break;
             case R.id.tv_title_exit_profile:
+                flameLogin();
                 break;
         }
     }
@@ -156,6 +180,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     private void flameMyCards() {
         Intent i = new Intent(ProfileActivity.this, MyCardsActivity.class);
+        startActivity(i);
+    }
+
+    private void flameLogin() {
+        Intent i = new Intent(ProfileActivity.this, LoginActivity.class);
         startActivity(i);
     }
 
